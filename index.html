@@ -6,7 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Ice Breaker Station</title>
 </head>
-<body class="container mx-auto bg-gray-200">
+<body class="bg-gray-200">
     <header class="w-screen bg-sky-200">
         <div>Icebreaker Station</div>
         <div>
@@ -18,18 +18,20 @@
             </nav>
         </div>
     </header>
-    <main class="container">
-        <div class="size-6/12">
-            <img src="./assets/images/ice-breaker.png" alt="little man breaking large ice cube with a large ice pick">
+    <main class="container mx-auto">
+        <div class="flex justify-center">
+            <div class="size-5/12 min-w-60">
+                <img src="./assets/images/ice-breaker.png" alt="little man breaking large ice cube with a large ice pick">
+            </div>
         </div>
-        <div>
+        <div class="text-center">
             <h1>Breaking ice is hard work... Let us do it for you!</h1>
             <h2>Select the type of icebreaker you would like to generate.</h2>
         </div>
-        <div class="gap-8 columns-1 sm:columns-3">
-            <div class="max-w-80"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube"></div>
-            <div class="max-w-80"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube"></div>
-            <div class="max-w-80"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube"></div>
+        <div class="mx-auto columns-1 sm:columns-3 place-items-center md:flex justify-center">
+            <div class="max-w-52 m-auto pt-3"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube"></div>
+            <div class="max-w-52 m-auto pt-3"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube"></div>
+            <div class="max-w-52 m-auto pt-3"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube"></div>
         </div>
 
     </main>
