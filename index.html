@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/resources/demos/style.css">
     <link rel="stylesheet" href="./assets/index.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Ice Breaker Station</title>
 </head>
 <body class="bg-slate-800">
@@ -55,11 +56,11 @@
                       <input type="submit" value="Submit">
                     </form>
                   </div>
-            <div class="relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube">
+            <button id="uselessFact" class="relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube">
                 <div id="fact-box" class="absolute inset-0 flex items-center justify-center text-center font-bold text-slate-700">
                     Useless Fact
                 </div>
-            </div>
+            </button>
         </div>
 
     </main>
