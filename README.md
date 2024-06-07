@@ -2,17 +2,13 @@
 
 ## User Story
 
-Title: Generate and Share Ice Breakers
-
-As a User looking to start conversations and engage groups with fun and interesting ice breakers.
-
+As A User looking to start conversations and engage groups with fun and interesting ice breakers.
 I WANT to easily generate different types of ice breakers (e.g., jokes, quotes, mad libs, two sides of a coin, ice breaker questions) and share them with others.
-
-So that I can quickly find and use engaging content to break the ice in social or professional settings.
+So THAT I can quickly find and use engaging content to break the ice in social or professional settings.
 
 ## Acceptance Criteria:
 
-Landing Page:
+-   Landing Page:
 
 The landing page includes a clean and modern design with a header, navigation menu, and a call-to-action section.
 
@@ -20,7 +16,7 @@ The header displays the website logo and navigation links (Home, About, Contact)
 
 The main content area features a welcome message and a brief description of the website’s purpose.
 
-Search Page:
+-   Search Page:
 
 Users can navigate to a search page via the landing page or navigation menu.
 
@@ -28,7 +24,7 @@ The search page has a dropdown menu or radio buttons to select the type of ice b
 
 A large “Generate Ice Breaker” button is prominently displayed below the selection options.
 
-Results Page:
+-   Results Page:
 
 Upon selecting an ice breaker type and clicking the “Generate Ice Breaker” button, users are directed to a results page.
 
@@ -38,7 +34,7 @@ Users can see the text of the ice breaker clearly and have options to share it v
 
 A “Back to Search” button is available for users to generate another ice breaker.
 
-Design and Usability:
+-   Design and Usability:
 
 The website maintains a consistent, user-friendly design across all pages.
 
@@ -48,13 +44,13 @@ The website supports both light and dark modes for user preference.
 
 All generated ice breakers are stored locally (e.g., using localStorage) for quick access and reference.
 
-Performance:
+-   Performance:
 
 The website loads quickly and efficiently, providing a smooth user experience.
 
 API calls for generating ice breakers are handled seamlessly, with minimal delay.
 
-Additional Notes:
+-   Additional Notes:
 
 Ensure that the website is mobile-responsive and accessible on various devices.
 
@@ -82,7 +78,7 @@ Icebreaker Station solves the problem of finding and generating engaging icebrea
 
 Through this project, we learned how to integrate multiple server-side APIs, implement client-side storage, ensure responsive design, and create a polished user interface using a CSS framework other than Bootstrap.
 
-## Table of Contents (Optional)
+## Table of Contents
 
 -   Installation
 -   Usage
@@ -166,7 +162,6 @@ If you would like to contribute to this project, please follow these guidelines:
 -   Copy code
     git commit -m 'Add your feature'
 
--
 -   Push to the branch:
     bash
 
