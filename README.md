@@ -8,25 +8,25 @@ So THAT I can quickly find and use engaging content to break the ice in social o
 
 ## Acceptance Criteria:
 
--   Landing Page:
+### Landing Page:
 
-The landing page includes a clean and modern design with a header, navigation menu, and a call-to-action section.
+-   The landing page includes a clean and modern design with a header, navigation menu, and a call-to-action section.
 
 The header displays the website logo and navigation links (Home, About, Contact).
 
 The main content area features a welcome message and a brief description of the website’s purpose.
 
--   Search Page:
+### Search Page:
 
-Users can navigate to a search page via the landing page or navigation menu.
+-   Users can navigate to a search page via the landing page or navigation menu.
 
 The search page has a dropdown menu or radio buttons to select the type of ice breaker they want to generate (Joke, Quote, Mad Lib, Two Sides of a Coin, Ice Breaker Questions).
 
 A large “Generate Ice Breaker” button is prominently displayed below the selection options.
 
--   Results Page:
+### Results Page:
 
-Upon selecting an ice breaker type and clicking the “Generate Ice Breaker” button, users are directed to a results page.
+-   Upon selecting an ice breaker type and clicking the “Generate Ice Breaker” button, users are directed to a results page.
 
 The results page displays the generated ice breaker in a visually appealing text box or card.
 
@@ -34,9 +34,9 @@ Users can see the text of the ice breaker clearly and have options to share it v
 
 A “Back to Search” button is available for users to generate another ice breaker.
 
--   Design and Usability:
+### Design and Usability:
 
-The website maintains a consistent, user-friendly design across all pages.
+-   The website maintains a consistent, user-friendly design across all pages.
 
 The interface is intuitive, with clear instructions and easy navigation.
 
@@ -44,15 +44,15 @@ The website supports both light and dark modes for user preference.
 
 All generated ice breakers are stored locally (e.g., using localStorage) for quick access and reference.
 
--   Performance:
+### Performance:
 
-The website loads quickly and efficiently, providing a smooth user experience.
+-   The website loads quickly and efficiently, providing a smooth user experience.
 
 API calls for generating ice breakers are handled seamlessly, with minimal delay.
 
--   Additional Notes:
+### Additional Notes:
 
-Ensure that the website is mobile-responsive and accessible on various devices.
+-   Ensure that the website is mobile-responsive and accessible on various devices.
 
 Include a footer with links to the Privacy Policy, Terms of Service, and social media icons.
 
@@ -111,14 +111,16 @@ Icebreaker Station allows users to generate different types of icebreakers and s
 
 ## How to Use
 
-Landing Page: The landing page features a clean and modern design with a header, navigation menu, and a call-to-action section. It includes a welcome message and a brief description of the website’s purpose.
-Search Page: Navigate to the search page via the landing page or navigation menu. Select the type of icebreaker (Joke, Quote, Mad Lib, Two Sides of a Coin, Ice Breaker Questions) and click the “Generate Ice Breaker” button.
-Results Page: The results page displays the generated icebreaker in a visually appealing text box or card. Users can share it via social media or copy it to their clipboard. A “Back to Search” button is available for generating another icebreaker.
-Screenshots
+-   Landing Page: The landing page features a clean and modern design with a header, navigation menu, and a call-to-action section. It includes a welcome message and a brief description of the website’s purpose.
+
+-   Search Page: Navigate to the search page via the landing page or navigation menu. Select the type of icebreaker (Joke, Quote, Mad Lib, Two Sides of a Coin, Ice Breaker Questions) and click the “Generate Ice Breaker” button.
+
+-   Results Page: The results page displays the generated icebreaker in a visually appealing text box or card. Users can share it via social media or copy it to their clipboard. A “Back to Search” button is available for generating another icebreaker.
+    Screenshots
 
 ## Credits
 
-This project was created by a group of four team members as part of the Osu Bootcamp.
+This project was created by a group of four team members as part of the OSU Bootcamp.
 
 -   Valya Strizheus
 -   Ashley Wright
@@ -150,22 +152,23 @@ This project is licensed under the MIT License. For more information, please ref
 If you would like to contribute to this project, please follow these guidelines:
 
 -   Fork the repository.
+
 -   Create a new branch for your feature or bugfix:
     bash
 
--   Copy code
+-   Copy code:
     git checkout -b feature/your-feature-name
 
 -   Commit your changes:
     bash
 
--   Copy code
+-   Copy code:
     git commit -m 'Add your feature'
 
 -   Push to the branch:
     bash
 
--   Copy code
+-   Copy code:
     git push origin feature/your-feature-name
 
 -   Open a pull request.
