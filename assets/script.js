@@ -9,6 +9,9 @@ let newQuote;
 function uselessFactClick(event) {
     event.preventDefault();
 
+    //clear local storage so only this result will display on results screen
+    localStorage.clear();
+
     fetch(`https://uselessfacts.jsph.pl/api/v2/facts/random`)
     .then(function(resp) {
         return resp.json();
@@ -20,11 +23,16 @@ function uselessFactClick(event) {
         }
         uselessFact = data.text;
         console.log(uselessFact);
+        localStorage.setItem('uselessFact', JSON.stringify(data));
+        //redirect to a search-results page
+        window.location.href = 'search-results.html';
         return;
     })
     .catch(function(error) {
         console.error('Error fetching random useless fact: ', error);
     });
+
+    //save the fact to local storage
 }
 
 async function getRandomQuote(event) {
