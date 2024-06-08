@@ -23,6 +23,7 @@ function uselessFactClick(event) {
         }
         uselessFact = data.text;
         console.log(uselessFact);
+        localStorage.setItem('selectedType', 'uselessFact');
         localStorage.setItem('uselessFact', JSON.stringify(data));
         //redirect to a search-results page
         window.location.href = 'search-results.html';
