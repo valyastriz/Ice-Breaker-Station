@@ -27,42 +27,24 @@ function uselessFactClick(event) {
     });
 }
 
-function inspirQuoteClick(event) {
+async function getRandomQuote(event) {
     event.preventDefault();
+    const targetUrl = 'https://api.quotable.io/random';
+    const resp = await fetch(targetUrl);
+    const data = await resp.json();
 
-    fetch(`https://zenquotes.io/api/quotes`)
-    .then(function(resp) {
-        return resp.json();
-    })
-    .then(function(data) {
-        if (!data || !data.text) {
-            console.log('No results returned');
-            return;
-        }
-        newQuote = data.text;
-        console.log(newQuote);
+    if (!data || !data.content) {
+        console.log('No results returned');
         return;
-    })
-    .catch(function(error) {
-        console.error('Error fetching inspirational quote: ', error);
-    });
-}
-
-
-function getRandomQuote(event) {
-    event.preventDefault();
-
-    const inspirAPIURL = "https://zenquotes.io/api/quotes";
-    getQuote(inspirAPIURL);
-}
-
-async function getQuote(url)
-    {
-        const response = await fetch(url);
-        let data = await response.json();
-        console.log(data);
     }
-
+    newQuote = data.content;
+    console.log(newQuote);
+    console.log('data',data);
+    return;
+}
 
 uselessFactEl.addEventListener('click', uselessFactClick);
 inspirQuoteEl.addEventListener('click', getRandomQuote);
+
+
+// new api for random quote https://api.quotable.io/random
