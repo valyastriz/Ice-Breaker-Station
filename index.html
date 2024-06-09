@@ -45,7 +45,7 @@
                     Joke
                 </div></button>
                 <!--new from here-->
-                <div id="jokeModal" class="container grid grid-cols-8 mx-auto p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg items-center space-x-4 invisible">
+                <div id="jokeModal" class="container grid grid-cols-8 mx-auto p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg items-center space-x-4 hidden">
                     <div class="col-span-8 text-xl font-medium text-black text-center">Joke</div>
                       <p class="col-span-8 text-slate-500 text-center">What type of joke are you looking for?</p>
                       <div class="col-span-8" id="dialog-form" title="Choose a genre:">
@@ -62,7 +62,7 @@
                           <br>
                           <div class="flex justify-between mt-4">
                             <button type="submit" onclick="handleJokeSubmit()" class="bg-blue-500 text-white p-2 w-1/2 mx-1 rounded">Submit</button>
-                            <button type="button" onclick="closeModal()" class="bg-red-500 text-white p-2 w-1/2 mx-1 rounded">Cancel</button>
+                            <button id="cancelBtn" type="button" onclick="closeModal()" class="bg-red-500 text-white p-2 w-1/2 mx-1 rounded">Cancel</button>
                           </div>
                         </form>
                       </div>                      

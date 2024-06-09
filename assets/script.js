@@ -5,12 +5,21 @@ const inspirQuoteEl = document.getElementById('inspirQuote');
 let newQuote;
 const jokeModalEl = document.getElementById('jokeModal');
 const jokeBtnEl = document.getElementById('jokeBtn')
+const cancelBtnEl = document.getElementById('cancelBtn');
                     
 function openJokeModal(event) {
-    console.log('in openjokemodal')
     event.preventDefault();
-    jokeModalEl.classList.remove('invisible');
-    jokeModalEl.classList.add('visible');
+    jokeModalEl.classList.remove('hidden');
+}
+
+function closeJokeModal(event) {
+    event.preventDefault();
+    //clear the form fields
+    const form = document.querySelector('#dialog-form form');
+    if (form) {
+        form.reset();
+    }
+    jokeModalEl.classList.add('hidden');
 }
 
 //function to handle the click on the useless facts card
@@ -70,6 +79,6 @@ async function getRandomQuote(event) {
 uselessFactEl.addEventListener('click', uselessFactClick);
 inspirQuoteEl.addEventListener('click', getRandomQuote);
 jokeBtnEl.addEventListener('click', openJokeModal);
-
+cancelBtnEl.addEventListener('click', closeJokeModal);
 
 // new api for random quote https://api.quotable.io/random
