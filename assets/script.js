@@ -38,6 +38,9 @@ function uselessFactClick(event) {
 
 async function getRandomQuote(event) {
     event.preventDefault();
+    //clear local storage so only this result will display on results screen
+    localStorage.clear();
+    
     const targetUrl = 'https://api.quotable.io/random';
     const resp = await fetch(targetUrl);
     const data = await resp.json();
