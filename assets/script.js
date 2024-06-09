@@ -3,10 +3,13 @@ const uselessFactEl = document.getElementById('uselessFact');
 let uselessFact;
 const inspirQuoteEl = document.getElementById('inspirQuote');
 let newQuote;
-const jokeModalImg = document.getElementById('jokeModal');
+const jokeModalEl = document.getElementById('jokeModal');
+const jokeBtnEl = document.getElementById('jokeBtn')
                     
-function openJokeModal() {
-    jokeModalEl = document.getElementById('jokeModal');
+function openJokeModal(event) {
+    console.log('in openjokemodal')
+    event.preventDefault();
+    jokeModalEl.classList.remove('invisible');
     jokeModalEl.classList.add('visible');
 }
 
@@ -66,7 +69,7 @@ async function getRandomQuote(event) {
 
 uselessFactEl.addEventListener('click', uselessFactClick);
 inspirQuoteEl.addEventListener('click', getRandomQuote);
-jokeModalImg.addEventListener('click', openJokeModal);
+jokeBtnEl.addEventListener('click', openJokeModal);
 
 
 // new api for random quote https://api.quotable.io/random

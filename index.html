@@ -40,29 +40,32 @@
                     Random Quote
                 </div>
             </button>
-            <div class="relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube">
+            <button id="jokeBtn" class="relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube">
                 <div id="joke-box" class="absolute inset-0 flex items-center justify-center text-center font-bold text-slate-700">
                     Joke
-                </div></div>
+                </div></button>
                 <!--new from here-->
-                <div id="jokeModal" class="container mx-auto p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4 invisible">
-                    <div>
-                      <div class="text-xl font-medium text-black">Joke</div>
-                      <p class="text-slate-500">What type of joke are you looking for?</p>
-                      <div id="dialog-form" title="Choose a genre:">
-                        <form>
+                <div id="jokeModal" class="container grid grid-cols-8 mx-auto p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg items-center space-x-4 invisible">
+                    <div class="col-span-8 text-xl font-medium text-black text-center">Joke</div>
+                      <p class="col-span-8 text-slate-500 text-center">What type of joke are you looking for?</p>
+                      <div class="col-span-8" id="dialog-form" title="Choose a genre:">
+                        <br>
+                        <form class="w-full">
                           <label for="dropdown"></label>
-                          <select id="dropdown" name="dropdown">
+                          <select class="w-full p-2 border border-gray-300 rounded" id="dropdown" name="dropdown">
                             <option value="select">Select an option</option>
                             <option value="option1">Joke of the Day</option>
                             <option value="option2">Random Joke</option>
                             <option value="option3">Memes, Jokes, and more</option>
                           </select>
-                          <button type="submit" onclick="handleJokeSubmit()">Submit</button>
-                          <button type="button" onclick="closeModal()">Cancel</button>
+                          <br>
+                          <br>
+                          <div class="flex justify-between mt-4">
+                            <button type="submit" onclick="handleJokeSubmit()" class="bg-blue-500 text-white p-2 w-1/2 mx-1 rounded">Submit</button>
+                            <button type="button" onclick="closeModal()" class="bg-red-500 text-white p-2 w-1/2 mx-1 rounded">Cancel</button>
+                          </div>
                         </form>
-                      </div>
-                    </div>
+                      </div>                      
                   </div>
 
                 <!--new to here-->
