@@ -10,11 +10,28 @@ function renderUselessFact(data) {
     displayEl.appendChild(factDiv);
 }
 
+//render randomQuote fact
+function renderRandomQuote(data) {
+    const quoteDiv = document.createElement('div');
+    const quoteEl = document.createElement('h1');
+    quoteEl.classList.add('text-white', 'text-2xl', 'text-slate-50', 'tracking-wide', 'font-bold');
+    const authorEl = document.createElement('h2');
+    authorEl.classList.add('text-white', 'text-1xl', 'text-slate-50', 'tracking-wide', 'font-bold')
+    quoteEl.innerText = `${data.content}`;
+    authorEl.innerText = `~ ${data.author}`;
+    quoteDiv.appendChild(quoteEl);
+    quoteDiv.appendChild(authorEl);
+    displayEl.appendChild(quoteDiv);
+}
+
 function checkFactType() {
     const selectedType = localStorage.getItem('selectedType');
     const data = JSON.parse(localStorage.getItem(selectedType));
     if (selectedType === 'uselessFact') {
         renderUselessFact(data.text);
+    }
+    if (selectedType === "randomQuote") {
+        renderRandomQuote(data);
     }
     else {
         console.error("Unknown Type");
@@ -22,6 +39,5 @@ function checkFactType() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('test')
     checkFactType();
 });
