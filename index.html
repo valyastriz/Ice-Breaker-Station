@@ -40,22 +40,34 @@
                     Random Quote
                 </div>
             </button>
-            <div class="relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube">
+            <div onclick="openJokeModal()" class="relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube">
                 <div id="joke-box" class="absolute inset-0 flex items-center justify-center text-center font-bold text-slate-700">
                     Joke
                 </div></div>
-                <div id="dialog-form" title="Choose a genre:">
-                    <form>
-                      <label for="dropdown">Select an option:</label>
-                      <select id="dropdown" name="dropdown">
-                        <option value="option1">Joke of the Day</option>
-                        <option value="option2">Random Joke</option>
-                        <option value="option3">Memes, Jokes, and more</option>
-                      </select>
-                      <input type="submit" value="Submit">
-                      <button type="button" onclick="closeModal()">Cancel</button>
-                    </form>
+                <!--new from here-->
+                <div class="container mx-auto p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
+                    <div>
+                      <div class="text-xl font-medium text-black">Joke</div>
+                      <p class="text-slate-500">What type of joke are you looking for?</p>
+                      <div id="dialog-form" title="Choose a genre:">
+                        <form>
+                          <label for="dropdown"></label>
+                          <select id="dropdown" name="dropdown">
+                            <option value="select">Select an option</option>
+                            <option value="option1">Joke of the Day</option>
+                            <option value="option2">Random Joke</option>
+                            <option value="option3">Memes, Jokes, and more</option>
+                          </select>
+                          <button type="submit" onclick="handleJokeSubmit()">Submit</button>
+                          <button type="button" onclick="closeModal()">Cancel</button>
+                        </form>
+                      </div>
+                    </div>
                   </div>
+
+                <!--new to here-->
+
+                <!-- original from here -->
             <button id="uselessFact" class="relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube">
                 <div id="fact-box" class="absolute inset-0 flex items-center justify-center text-center font-bold text-slate-700">
                     Useless Fact
