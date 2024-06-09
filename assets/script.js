@@ -49,6 +49,10 @@ async function getRandomQuote(event) {
     newQuote = data.content;
     console.log(newQuote);
     console.log('data',data);
+    localStorage.setItem('selectedType', 'randomFact');
+    localStorage.setItem('randomQuote', JSON.stringify(data));
+    //redirect to a search-results page
+    window.location.href = 'search-results.html';
     return;
 }
 
