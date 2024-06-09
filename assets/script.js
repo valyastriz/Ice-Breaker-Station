@@ -3,7 +3,12 @@ const uselessFactEl = document.getElementById('uselessFact');
 let uselessFact;
 const inspirQuoteEl = document.getElementById('inspirQuote');
 let newQuote;
-
+const jokeModalImg = document.getElementById('jokeModal');
+                    
+function openJokeModal() {
+    jokeModalEl = document.getElementById('jokeModal');
+    jokeModalEl.classList.add('visible');
+}
 
 //function to handle the click on the useless facts card
 function uselessFactClick(event) {
@@ -61,6 +66,7 @@ async function getRandomQuote(event) {
 
 uselessFactEl.addEventListener('click', uselessFactClick);
 inspirQuoteEl.addEventListener('click', getRandomQuote);
+jokeModalImg.addEventListener('click', openJokeModal);
 
 
 // new api for random quote https://api.quotable.io/random
