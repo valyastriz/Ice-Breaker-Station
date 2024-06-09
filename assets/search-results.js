@@ -1,4 +1,5 @@
 const displayEl = document.getElementById('displayResult');
+const backBtnEl = document.getElementById('backBtn');
 
 //render useless fact
 function renderUselessFact(data) {
@@ -16,7 +17,7 @@ function renderRandomQuote(data) {
     const quoteEl = document.createElement('h1');
     quoteEl.classList.add('text-white', 'text-2xl', 'text-slate-50', 'tracking-wide', 'font-bold');
     const authorEl = document.createElement('h2');
-    authorEl.classList.add('text-white', 'text-1xl', 'text-slate-50', 'tracking-wide', 'font-bold')
+    authorEl.classList.add('text-white', 'text-1xl', 'text-slate-50', 'tracking-wide', 'font-bold');
     quoteEl.innerText = `${data.content}`;
     authorEl.innerText = `~ ${data.author}`;
     quoteDiv.appendChild(quoteEl);
@@ -38,6 +39,15 @@ function checkFactType() {
     }
 }
 
+function handleBackBtnClick(event) {
+    event.preventDefault();
+    //redirect to a index.html page
+    window.location.href = 'index.html';
+    return;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     checkFactType();
+
+    backBtnEl.addEventListener('click', handleBackBtnClick);
 });
