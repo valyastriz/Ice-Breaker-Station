@@ -17,7 +17,6 @@ function handleSubmit(event) {
     if (selection === 'noSelection') {
         errorMessageEl.textContent = "*Please make a selection.";
     } else {
-        errorMessageEl.textContent = ""; // clears the error message
         
         if (selection === 'jokeOfDay') {
             console.log(selection);
