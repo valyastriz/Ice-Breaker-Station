@@ -6,25 +6,32 @@ let newQuote;
 const jokeModalEl = document.getElementById('jokeModal');
 const jokeBtnEl = document.getElementById('jokeBtn')
 const cancelBtnEl = document.getElementById('cancelBtn');
-const submitEl = document.getElementById('submit');
+const submitEl = document.getElementById('jokeForm');
+const dropdownEl = document.getElementById('dropdown');
                     
 function handleSubmit(event) {
     event.preventDefault();
     const selection = document.getElementById('dropdown').value;
     const errorMessageEl = document.getElementById('errorMessage');
+    
     if (selection === 'noSelection') {
         errorMessageEl.textContent = "*Please make a selection.";
     } else {
-        errorMessageEl.textContent = "" //clears the error message
+        errorMessageEl.textContent = ""; // clears the error message
+        
         if (selection === 'jokeOfDay') {
-        console.log(selection);
-        } else if (selection === 'randomJoke'){
+            console.log(selection);
+            closeJokeModal();
+        } else if (selection === 'randomJoke') {
             console.log('randomJoke');
-        } else (selection === 'dadJoke'); {
+            closeJokeModal();
+        } else if (selection === 'dadJoke') {
             console.log('dadJoke');
+            closeJokeModal();
         }
-        closeJokeModal();
+        
     }
+    
 }
 
 function openJokeModal(event) {
@@ -95,6 +102,13 @@ async function getRandomQuote(event) {
     window.location.href = 'search-results.html';
     return;
 }
+dropdownEl.addEventListener('change', () => {
+    const selection = dropdownEl.value;
+    const errorMessageEl = document.getElementById('errorMessage');
+    if (selection !== 'noSelection') {
+        errorMessageEl.textContent = ""; //clear the error message when a valid selection is made, even before submit is clicked
+    }
+});
 
 uselessFactEl.addEventListener('click', uselessFactClick);
 inspirQuoteEl.addEventListener('click', getRandomQuote);
