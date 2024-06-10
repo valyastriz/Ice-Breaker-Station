@@ -38,7 +38,7 @@ function openJokeModal(event) {
     jokeModalEl.classList.remove('hidden');
 }
 
-function closeJokeModal(event) {
+function closeJokeModal() {
     //clear the form fields
     const form = document.querySelector('#dialog-form form');
     if (form) {
