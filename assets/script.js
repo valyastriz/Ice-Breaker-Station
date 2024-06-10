@@ -40,7 +40,6 @@ function openJokeModal(event) {
 }
 
 function closeJokeModal(event) {
-    event.preventDefault();
     //clear the form fields
     const form = document.querySelector('#dialog-form form');
     if (form) {
