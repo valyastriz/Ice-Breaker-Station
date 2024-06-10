@@ -19,18 +19,22 @@ function handleSubmit(event) {
     } else {
         
         if (selection === 'jokeOfDay') {
+            //To Do: Add logic for API call and store the response in local storage
             console.log(selection);
-            closeJokeModal();
+            localStorage.setItem('selectedType', 'jokeOfDay');
         } else if (selection === 'randomJoke') {
+            //To Do: Add logic for API call and store the response in local storage
             console.log('randomJoke');
-            closeJokeModal();
+            localStorage.setItem('selectedType', 'randomJoke');
         } else if (selection === 'dadJoke') {
+            //To Do: Add logic for API call and store the response in local storage
             console.log('dadJoke');
-            closeJokeModal();
+            localStorage.setItem('selectedType', 'dadJoke');
         }
-        
+        closeJokeModal();
+        // window.location.href = 'search-results.html';
+        return;
     }
-    
 }
 
 function openJokeModal(event) {
@@ -64,7 +68,6 @@ function uselessFactClick(event) {
             return;
         }
         uselessFact = data.text;
-        console.log(uselessFact);
         localStorage.setItem('selectedType', 'uselessFact');
         localStorage.setItem('uselessFact', JSON.stringify(data));
         //redirect to a search-results page
