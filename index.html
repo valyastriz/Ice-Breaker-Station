@@ -54,15 +54,15 @@
                         <form class="w-full">
                           <label for="dropdown"></label>
                           <select class="w-full p-2 border border-gray-300 rounded" id="dropdown" name="dropdown">
-                            <option value="select">Select an option</option>
-                            <option value="option1">Joke of the Day</option>
-                            <option value="option2">Random Joke</option>
-                            <option value="option3">Memes, Jokes, and more</option>
+                            <option id="noSelection" value="noSelection">Select an option</option>
+                            <option id="jokeOfDay" value="jokeOfDay">Joke of the Day</option>
+                            <option id="randomJoke" value="randomJoke">Random Joke</option>
+                            <option id="dadJoke" value="dadJoke">Dad Joke</option>
                           </select>
                           <br>
                           <br>
                           <div class="flex justify-between mt-4">
-                            <button type="submit" onclick="handleJokeSubmit()" class="bg-blue-500 text-white p-2 w-1/2 mx-1 rounded">Submit</button>
+                            <button id="submit" type="submit" onclick="handleJokeSubmit()" class="bg-blue-500 text-white p-2 w-1/2 mx-1 rounded">Submit</button>
                             <button id="cancelBtn" type="button" onclick="closeModal()" class="bg-red-500 text-white p-2 w-1/2 mx-1 rounded">Cancel</button>
                           </div>
                         </form>

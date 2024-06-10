@@ -6,7 +6,16 @@ let newQuote;
 const jokeModalEl = document.getElementById('jokeModal');
 const jokeBtnEl = document.getElementById('jokeBtn')
 const cancelBtnEl = document.getElementById('cancelBtn');
+const submitEl = document.getElementById('submit');
                     
+function handleSubmit(event) {
+    event.preventDefault();
+    const selection = document.getElementById('selection').value();
+    if (selection === 'jokeOfDay') {
+        console.log(selection);
+    }
+}
+
 function openJokeModal(event) {
     event.preventDefault();
     jokeModalEl.classList.remove('hidden');
@@ -80,5 +89,5 @@ uselessFactEl.addEventListener('click', uselessFactClick);
 inspirQuoteEl.addEventListener('click', getRandomQuote);
 jokeBtnEl.addEventListener('click', openJokeModal);
 cancelBtnEl.addEventListener('click', closeJokeModal);
-
+submitEl.addEventListener('click', handleSubmit);
 // new api for random quote https://api.quotable.io/random
