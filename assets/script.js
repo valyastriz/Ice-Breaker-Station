@@ -17,25 +17,43 @@ function handleSubmit(event) {
     if (selection === 'noSelection') {
         errorMessageEl.textContent = "*Please make a selection.";
     } else {
-        
         if (selection === 'jokeOfDay') {
-            //To Do: Add logic for API call and store the response in local storage
-            console.log(selection);
-            localStorage.setItem('selectedType', 'jokeOfDay');
+            jokeOfDay();
         } else if (selection === 'randomJoke') {
-            //To Do: Add logic for API call and store the response in local storage
-            console.log('randomJoke');
-            localStorage.setItem('selectedType', 'randomJoke');
+            randomJoke();
         } else if (selection === 'dadJoke') {
-            //To Do: Add logic for API call and store the response in local storage
-            console.log('dadJoke');
-            localStorage.setItem('selectedType', 'dadJoke');
-        }
-        closeJokeModal();
-        // window.location.href = 'search-results.html';
-        return;
+            dadJoke();
+        }    
     }
 }
+
+function jokeOfDay() {
+    //To Do: Add logic for API call and store the response in local storage
+    console.log('jokeOfDay');
+    localStorage.setItem('selectedType', 'jokeOfDay');
+    closeJokeModal();
+    window.location.href = 'search-results.html';
+    return;
+}
+
+function randomJoke() {
+    //To Do: Add logic for API call and store the response in local storage
+    console.log('randomJoke');
+    localStorage.setItem('selectedType', 'randomJoke');
+    closeJokeModal();
+    window.location.href = 'search-results.html';
+    return;
+}
+
+function dadJoke() {
+    //To Do: Add logic for API call and store the response in local storage
+    console.log('dadJoke');
+    localStorage.setItem('selectedType', 'dadJoke');
+    closeJokeModal();
+    window.location.href = 'search-results.html';
+    return;
+}
+
 
 function openJokeModal(event) {
     event.preventDefault();
