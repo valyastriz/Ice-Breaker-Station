@@ -10,9 +10,16 @@ const submitEl = document.getElementById('submit');
                     
 function handleSubmit(event) {
     event.preventDefault();
-    const selection = document.getElementById('selection').value();
-    if (selection === 'jokeOfDay') {
+    const selection = document.getElementById('dropdown').value;
+    if (selection === 'noSelection') {
+        
+    }
+    else if (selection === 'jokeOfDay') {
         console.log(selection);
+    } else if (selection === 'randomJoke'){
+        console.log('randomJoke');
+    } else if (selection === 'dadJoke') {
+        console.log('dadJoke');
     }
 }
 
