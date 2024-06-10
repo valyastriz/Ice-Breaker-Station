@@ -11,15 +11,19 @@ const submitEl = document.getElementById('submit');
 function handleSubmit(event) {
     event.preventDefault();
     const selection = document.getElementById('dropdown').value;
+    const errorMessageEl = document.getElementById('errorMessage');
     if (selection === 'noSelection') {
-        
-    }
-    else if (selection === 'jokeOfDay') {
+        errorMessageEl.textContent = "*Please make a selection.";
+    } else {
+        errorMessageEl.textContent = "" //clears the error message
+        if (selection === 'jokeOfDay') {
         console.log(selection);
-    } else if (selection === 'randomJoke'){
-        console.log('randomJoke');
-    } else if (selection === 'dadJoke') {
-        console.log('dadJoke');
+        } else if (selection === 'randomJoke'){
+            console.log('randomJoke');
+        } else (selection === 'dadJoke'); {
+            console.log('dadJoke');
+        }
+        closeJokeModal();
     }
 }
 
@@ -96,5 +100,5 @@ uselessFactEl.addEventListener('click', uselessFactClick);
 inspirQuoteEl.addEventListener('click', getRandomQuote);
 jokeBtnEl.addEventListener('click', openJokeModal);
 cancelBtnEl.addEventListener('click', closeJokeModal);
-submitEl.addEventListener('click', handleSubmit);
+submitEl.addEventListener('submit', handleSubmit);
 // new api for random quote https://api.quotable.io/random
