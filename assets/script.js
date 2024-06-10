@@ -32,7 +32,7 @@ function jokeOfDay() {
     console.log('jokeOfDay');
     localStorage.setItem('selectedType', 'jokeOfDay');
     closeJokeModal();
-    window.location.href = 'search-results.html';
+    // window.location.href = 'search-results.html';
     return;
 }
 
@@ -41,7 +41,7 @@ function randomJoke() {
     console.log('randomJoke');
     localStorage.setItem('selectedType', 'randomJoke');
     closeJokeModal();
-    window.location.href = 'search-results.html';
+    // window.location.href = 'search-results.html';
     return;
 }
 
@@ -50,7 +50,7 @@ function dadJoke() {
     console.log('dadJoke');
     localStorage.setItem('selectedType', 'dadJoke');
     closeJokeModal();
-    window.location.href = 'search-results.html';
+    // window.location.href = 'search-results.html';
     return;
 }
 
