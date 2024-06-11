@@ -35,31 +35,49 @@
             <h2>Select the type of icebreaker you would like to generate.</h2>
         </div>
         <div class="mx-auto columns-1 sm:columns-3 place-items-center md:flex justify-center ">
-            <div class="relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube">
+            <button class="relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer" id="inspirQuote"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube">
                 <div id="quote-box" class="absolute inset-0 flex items-center justify-center text-center font-bold text-slate-700">
-                    Inspirational Quote
+                    Random Quote
                 </div>
-            </div>
-            <div class="relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube">
+            </button>
+            <button id="jokeBtn" class="relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube">
                 <div id="joke-box" class="absolute inset-0 flex items-center justify-center text-center font-bold text-slate-700">
                     Joke
-                </div></div>
-                <div id="dialog-form" title="Choose a genre:">
-                    <form>
-                      <label for="dropdown">Select an option:</label>
-                      <select id="dropdown" name="dropdown">
-                        <option value="option1">Joke of the Day</option>
-                        <option value="option2">Random Joke</option>
-                        <option value="option3">Memes, Jokes, and more</option>
-                      </select>
-                      <input type="submit" value="Submit">
-                    </form>
+                </div></button>
+                <!--new from here-->
+                <div id="jokeModal" class="modal hidden">
+                    <div class="text-xl font-medium text-black text-center">Joke</div>
+                    <br>
+                      <p class="text-slate-500 text-center">What type of joke are you looking for?</p>
+                      <div id="dialog-form" title="Choose a genre:">
+                        <br>
+                        <form class="w-full" id="jokeForm">
+                          <label for="dropdown"></label>
+                          <select class="w-full p-2 border border-gray-300 rounded" id="dropdown" name="dropdown">
+                            <option id="noSelection" value="noSelection">Select an option</option>
+                            <option id="jokeOfDay" value="jokeOfDay">Joke of the Day</option>
+                            <option id="randomJoke" value="randomJoke">Random Joke</option>
+                            <option id="dadJoke" value="dadJoke">Dad Joke</option>
+                          </select>
+                          <br>
+                          <br>
+                          <div class="flex justify-between mt-4">
+                            <button id="submit" type="submit" class="bg-blue-500 text-white p-2 w-1/2 mx-1 rounded">Submit</button>
+                            <button id="cancelBtn" type="button" onclick="closeModal()" class="bg-red-500 text-white p-2 w-1/2 mx-1 rounded">Cancel</button>
+                          </div>
+                          <div id="errorMessage" class="text-red-500 mt-2"></div>
+                        </form>
+                      </div>                      
                   </div>
-            <div class="relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube">
+
+                <!--new to here-->
+
+                <!-- original from here -->
+            <button id="uselessFact" class="relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer"><img src="./assets/images/icecube.png" alt="image of a 3D ice cube">
                 <div id="fact-box" class="absolute inset-0 flex items-center justify-center text-center font-bold text-slate-700">
                     Useless Fact
                 </div>
-            </div>
+            </button>
         </div>
 
     </main>
