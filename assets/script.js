@@ -41,25 +41,32 @@ function randomJoke(event) {
     event.preventDefault();
 
     localStorage.clear();
-    fetch('https://official-joke-api.appspot.com/random_joke')
-    console.log()
-    .then(function(resp) {
-        return resp.json();
+    fetch(`https://official-joke-api.appspot.com/random_joke`)
+    .then(async (resp) => {
+        let response = await resp.json();
+        console.log(response);
+        return response;
     })
     .then(function(data) {
-        if (!data || !data.text) {
+        if (!data || !data.punchline) {
             console.log('No results returned');
             return;
         }
-        randomJoke = data.text;
-        console.log('randomJoke');
+        console.log(data);
+        let setup = data.setup;
+        let punchline = data.punchline;
+        const joke = {
+            setup: setup, 
+            punchline: punchline
+        }
+        localStorage.setItem('joke', JSON.stringify(joke));
         localStorage.setItem('selectedType', 'randomJoke');
         window.location.href = 'search-results.html';
         closeJokeModal();
         return;
     })
     .catch(function(error) {
-        console.error('Error fetching random useless fact: ', error);
+        console.error('Error fetching random joke: ', error);
     })
 }
 

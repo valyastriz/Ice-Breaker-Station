@@ -25,6 +25,19 @@ function renderRandomQuote(data) {
     displayEl.appendChild(quoteDiv);
 }
 
+function renderRandomJoke(data) {
+    const jokeDiv = document.createElement('div');
+    const setupEl = document.createElement('h1');
+    setupEl.classList.add('text-white', 'text-2xl', 'text-slate-50', 'tracking-wide', 'font-bold');
+    const punchlineEl = document.createElement('h2');
+    punchlineEl.classList.add('text-white', 'text-1xl', 'text-slate-50', 'tracking-wide', 'font-bold');
+    setupEl.innerText = 
+    punchlineEl.innerText = 
+    jokeDiv.appendChild(setupEl);
+    jokeDiv.appendChild(punchlineEl);
+    displayEl.appendChild(jokeDiv);
+}
+
 function checkFactType() {
     const selectedType = localStorage.getItem('selectedType');
     const data = JSON.parse(localStorage.getItem(selectedType));
@@ -33,6 +46,9 @@ function checkFactType() {
     }
     if (selectedType === "randomQuote") {
         renderRandomQuote(data);
+    }
+    if (selectedType === 'randomJoke') {
+        renderRandomJoke(data);
     }
     else {
         console.error("Unknown Type");
