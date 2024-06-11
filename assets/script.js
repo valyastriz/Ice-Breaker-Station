@@ -20,7 +20,7 @@ function handleSubmit(event) {
         if (selection === 'jokeOfDay') {
             jokeOfDay();
         } else if (selection === 'randomJoke') {
-            randomJoke();
+            randomJoke(event);
         } else if (selection === 'dadJoke') {
             dadJoke();
         }    
@@ -36,13 +36,31 @@ function jokeOfDay() {
     return;
 }
 
-function randomJoke() {
+function randomJoke(event) {
     //To Do: Add logic for API call and store the response in local storage
-    console.log('randomJoke');
-    localStorage.setItem('selectedType', 'randomJoke');
-    closeJokeModal();
-    // window.location.href = 'search-results.html';
-    return;
+    event.preventDefault();
+
+    localStorage.clear();
+    fetch('https://official-joke-api.appspot.com/random_joke')
+    console.log()
+    .then(function(resp) {
+        return resp.json();
+    })
+    .then(function(data) {
+        if (!data || !data.text) {
+            console.log('No results returned');
+            return;
+        }
+        randomJoke = data.text;
+        console.log('randomJoke');
+        localStorage.setItem('selectedType', 'randomJoke');
+        window.location.href = 'search-results.html';
+        closeJokeModal();
+        return;
+    })
+    .catch(function(error) {
+        console.error('Error fetching random useless fact: ', error);
+    })
 }
 
 function dadJoke() {
