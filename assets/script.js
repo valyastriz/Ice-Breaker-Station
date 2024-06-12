@@ -57,14 +57,16 @@ function dadJoke(event) {
         url: 'https://api.api-ninjas.com/v1/dadjokes?limit=',
         headers: { 'X-API-Key': 'bMihd37nmqvClWbzkx7xfQ==ibPk7EDF5byNpUhy'},
         contentType: 'application/json',
-        succes: function(data) {
-            if (!data || !data.text) {
+        success: function(data) {
+            if (!data || !data.length === 0) {
                 console.log('No results returned');
                 return;
             }
-            dadJoke = data.text;
+            console.log(data[0].joke);
+            const dadJoke = data;
+            console.log(dadJoke);
             localStorage.setItem('selectedType', 'dadJoke');
-            localStorage.setItem('dadJoke', JSON.stringify(data));
+            localStorage.setItem('dadJoke', JSON.stringify(dadJoke));
             //redirect to a search-results page
             // window.location.href = 'search-results.html';
             return;
