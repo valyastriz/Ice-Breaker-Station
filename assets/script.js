@@ -62,9 +62,7 @@ function dadJoke(event) {
                 console.log('No results returned');
                 return;
             }
-            console.log(data[0].joke);
-            const dadJoke = data;
-            console.log(dadJoke);
+            const dadJoke = data[0].joke;
             localStorage.setItem('selectedType', 'dadJoke');
             localStorage.setItem('dadJoke', JSON.stringify(dadJoke));
             //redirect to a search-results page
