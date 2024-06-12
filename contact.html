@@ -3,10 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Ice Breaker Station</title>
 </head>
-<body>
-    <h2 id="gabby">Gabby Seri</h2>
+  <body class="bg-slate-800 min-h-screen flex flex-col">
+    <header class="w-screen bg-sky-200">
+        <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+                <img class="fill-current h-8 w-8 mr-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG-ix-vBALr8x7YFMY8YPufL9QuT6efOCIJw&s"/>
+                <span class="font-semibold text-xl tracking-tight">Ice Breaker Station</span>
+            </div>
+            <div class="block lg:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:justify-end">
+                <div class="text-sm lg:flex-grow lg:text-right">
+                    <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Home</a>
+                    <a href="about.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">About</a>
+                    <a href="contact.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+      
+    <main>
+        <h2 id="gabby">Gabby Seri</h2>
         <ul id="gabby-contact">
             <li>
                 <a href="https://github.com/DevGS23">GitHub</a>
@@ -48,5 +78,49 @@
                 <a href="https://www.linkedin.com/in/ashley-wright-a24705305/">LinkdIn</a>
             </li>
         </ul>
-</body>
+    </main>
+    <footer class="w-screen bg-sky-200 mt-8">
+        <nav class="flex items-center justify-start flex-wrap bg-teal-500 p-6">
+          
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow lg:text-left">
+                    <a
+                        href="#responsive-footer"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                    >
+                        Link 1
+                    </a>|
+                    <a
+                        href="#responsive-footer"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                    >
+                        Link 2 
+                    </a>|
+                    <a
+                        href="#responsive-footer"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                    >
+                        Link 3
+                    </a>
+                    <a
+                        href="#responsive-footer"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                    >
+                        Link 4
+                    </a>
+                    <a
+                        href="#responsive-footer"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+                    >
+                        Link 5
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+    </footer>
+     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src="./assets/search-results.js"></script>
+    </body>
 </html>
