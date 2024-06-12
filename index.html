@@ -16,7 +16,7 @@
             rel="stylesheet"/>
         <title>Ice Breaker Station</title>
     </head>
-    <body class="bg-slate-800" style="font-family: 'Jaro Sans', sans-serif;">
+    <body class="bg-slate-800 min-h-screen flex flex-col" style="font-family: 'Jaro Sans', sans-serif;">
         <header class="w-screen bg-sky-200">
             <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
                 <div class="flex items-center flex-shrink-0 text-white mr-6">
@@ -40,9 +40,9 @@
                 </div>
             </nav>
         </header>
-        <main class="container mx-auto">
-            <div class="flex justify-center">
-                <div class="size-4/12 min-w-60">
+        <main class="container mx-auto flex-grow">
+            <div class="flex justify-center mt-16">
+                <div class="size-3/12 min-w-60">
                     <img
                         src="./assets/images/ice-breaker.png"
                         alt="little man breaking large ice cube with a large ice pick"
@@ -50,10 +50,8 @@
                 </div>
             </div>
             <div class="text-center text-white">
-                <h1>Breaking ice is hard work... Let us do it for you!</h1>
-                <h2>
-                    Select the type of icebreaker you would like to generate.
-                </h2>
+                <h1 class="text-2xl my-3">Breaking ice is hard work... Let us do it for you!</h1>
+                <h2 class="text-1xl my-3">Select the type of icebreaker you would like to generate.</h2>
             </div>
             <div
                 class="mx-auto columns-1 sm:columns-3 place-items-center md:flex justify-center"
