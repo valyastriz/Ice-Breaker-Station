@@ -17,7 +17,7 @@ function renderDadJoke(data) {
     const dadJokeEl = document.createElement('h1');
     dadJokeEl.classList.add('text-white', 'text-2xl', 'text-slate-50', 'tracking-wide', 'font-bold');
     dadJokeEl.innerText = `${data}`;
-    factDiv.appendChild(dadJokeEl);
+    dadJokeDiv.appendChild(dadJokeEl);
     displayEl.appendChild(dadJokeDiv);
 }
 
