@@ -20,8 +20,11 @@ function handleSubmit(event) {
         if (selection === 'jokeOfDay') {
             jokeOfDay();
         } else if (selection === 'randomJoke') {
-            randomJoke(event);
-        } else if (selection === 'dadJoke') {
+            randomJoke();
+        } else if(selection === 'dadJoke') {
+            dadJoke();
+        }
+        else if (selection === 'dadJoke') {
             dadJoke();
         }    
     }
@@ -70,7 +73,32 @@ function randomJoke(event) {
     })
 }
 
-function dadJoke() {
+function dadJoke(event) {
+    // event.preventDefault();
+    //clear local storage so only this result will display on results screen
+    localStorage.clear();
+    $.ajax({
+        method: 'GET',
+        url: 'https://api.api-ninjas.com/v1/dadjokes?limit=',
+        headers: { 'X-API-Key': 'bMihd37nmqvClWbzkx7xfQ==ibPk7EDF5byNpUhy'},
+        contentType: 'application/json',
+        success: function(data) {
+            if (!data || !data.length === 0) {
+                console.log('No results returned');
+                return;
+            }
+            const dadJoke = data[0].joke;
+            localStorage.setItem('selectedType', 'dadJoke');
+            localStorage.setItem('dadJoke', JSON.stringify(dadJoke));
+            //redirect to a search-results page
+            window.location.href = 'search-results.html';
+            return;
+        },
+        error: function ajaxError(jqXHR) {
+            console.error('Error: ', jqXHR.responseText);
+        }
+    });
+
     //To Do: Add logic for API call and store the response in local storage
     console.log('dadJoke');
     localStorage.setItem('selectedType', 'dadJoke');

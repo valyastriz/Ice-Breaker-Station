@@ -11,6 +11,16 @@ function renderUselessFact(data) {
     displayEl.appendChild(factDiv);
 }
 
+//render dad joke
+function renderDadJoke(data) {
+    const dadJokeDiv = document.createElement('div');
+    const dadJokeEl = document.createElement('h1');
+    dadJokeEl.classList.add('text-white', 'text-2xl', 'text-slate-50', 'tracking-wide', 'font-bold');
+    dadJokeEl.innerText = `${data}`;
+    dadJokeDiv.appendChild(dadJokeEl);
+    displayEl.appendChild(dadJokeDiv);
+}
+
 //render randomQuote fact
 function renderRandomQuote(data) {
     const quoteDiv = document.createElement('div');
@@ -44,11 +54,14 @@ function checkFactType() {
     if (selectedType === 'uselessFact') {
         renderUselessFact(data.text);
     }
-    if (selectedType === "randomQuote") {
+    else if (selectedType === "randomQuote") {
         renderRandomQuote(data);
     }
     if (selectedType === 'randomJoke') {
         renderRandomJoke(data);
+    } 
+    if (selectedType === "dadJoke") {
+        renderDadJoke(data);
     }
     else {
         console.error("Unknown Type");

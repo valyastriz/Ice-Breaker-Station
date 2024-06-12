@@ -10,33 +10,84 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Ice Breaker Station</title>
 </head>
-<body class="bg-slate-800 flex flex-col min-h-screen">
+  <body class="bg-slate-800 min-h-screen flex flex-col">
     <header class="w-screen bg-sky-200">
-        <div class="logo">Icebreaker Station</div>
-        <div>
-            <nav>
-                <ul>
-                    <li>About</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+                <img class="fill-current h-8 w-8 mr-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG-ix-vBALr8x7YFMY8YPufL9QuT6efOCIJw&s"/>
+                <span class="font-semibold text-xl tracking-tight">Ice Breaker Station</span>
+            </div>
+            <div class="block lg:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:justify-end">
+                <div class="text-sm lg:flex-grow lg:text-right">
+                    <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Home</a>
+                    <a href="about.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">About</a>
+                    <a href="contact.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">Contact</a>
+                </div>
+            </div>
+        </nav>
     </header>
-    <main class="container mx-auto flex-grow">
+      
+
+           <main class="container mx-auto flex-grow">
         <div id="displayResult"></div>
         <div id="backBtnDiv">
             <button id="backBtn" class="bg-sky-200 px-2 max-w-52 m-auto pt-3 pb-3 rounded font-bold hover:cursor-pointer hover:bg-sky-300 focus:outline-none hover:ring hover:ring-cyan-600">Generate a new Icebreaker</button>
         </div>
         <script src="./assets/search-results.js"></script>
     </main>
-    <footer class="w-screen bg-sky-200">
-        <nav> 
-            <ul>
-              <li>Phone: <a href="tel:+16145725210">614-572-5210</a></li>
-              <li>Email: <a href="mailto:valyastriz@gmail.com">valyastriz@gmail.com</a></li>
-              <li>GitHub: <a href="https://github.com/valyastriz">GitHub</a></li>
-            </ul>
-          </nav>
+
+
+    
+    <footer class="w-screen bg-sky-200 mt-8">
+        <nav class="flex items-center justify-start flex-wrap bg-teal-500 p-6">
+          
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow lg:text-left">
+                    <a
+                        href="#responsive-footer"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                    >
+                        Link 1
+                    </a>|
+                    <a
+                        href="#responsive-footer"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                    >
+                        Link 2 
+                    </a>|
+                    <a
+                        href="#responsive-footer"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                    >
+                        Link 3
+                    </a>
+                    <a
+                        href="#responsive-footer"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                    >
+                        Link 4
+                    </a>
+                    <a
+                        href="#responsive-footer"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+                    >
+                        Link 5
+                    </a>
+                </div>
+            </div>
+        </nav>
+
     </footer>
-</body>
+     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src="./assets/search-results.js"></script>
+    </body>
 </html>
