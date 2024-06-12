@@ -52,11 +52,9 @@ function dadJoke(event) {
     // event.preventDefault();
     //clear local storage so only this result will display on results screen
     localStorage.clear();
-    //set limit to number of joke to be received 
-    const limit = 1; 
     $.ajax({
         method: 'GET',
-        url: 'https://api.api-ninjas.com/v1/dadjokes?limit=' + limit,
+        url: 'https://api.api-ninjas.com/v1/dadjokes?limit=',
         headers: { 'X-API-Key': 'bMihd37nmqvClWbzkx7xfQ==ibPk7EDF5byNpUhy'},
         contentType: 'application/json',
         succes: function(data) {
@@ -70,8 +68,11 @@ function dadJoke(event) {
             //redirect to a search-results page
             // window.location.href = 'search-results.html';
             return;
+        },
+        error: function ajaxError(jqXHR) {
+            console.error('Error: ', jqXHR.responseText);
         }
-    })
+    });
 
     //To Do: Add logic for API call and store the response in local storage
     console.log('dadJoke');
