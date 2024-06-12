@@ -66,7 +66,7 @@ function dadJoke(event) {
             localStorage.setItem('selectedType', 'dadJoke');
             localStorage.setItem('dadJoke', JSON.stringify(dadJoke));
             //redirect to a search-results page
-            // window.location.href = 'search-results.html';
+            window.location.href = 'search-results.html';
             return;
         },
         error: function ajaxError(jqXHR) {
