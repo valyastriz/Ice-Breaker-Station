@@ -63,13 +63,41 @@ function riddle(event) {
     });
 }
 
-function randomJoke() {
+function randomJoke(event) {
     //To Do: Add logic for API call and store the response in local storage
-    console.log('randomJoke');
-    localStorage.setItem('selectedType', 'randomJoke');
-    closeJokeModal();
-    // window.location.href = 'search-results.html';
-    return;
+
+    localStorage.clear();
+    fetch(`https://official-joke-api.appspot.com/random_joke`)
+    .then(async (resp) => {
+        let response = await resp.json();
+        console.log(response);
+        return response;
+    })
+    .then(function(data) {
+        if (!data || !data.punchline) {
+            console.log('No results returned');
+            return;
+        }
+        console.log(data);
+
+        let setup = data.setup;
+        let punchline = data.punchline;
+        const joke = {
+            setup: setup, 
+            punchline: punchline
+        }
+
+        localStorage.setItem('joke', JSON.stringify(joke));
+        localStorage.setItem('selectedType', 'randomJoke');
+
+        window.location.href ='search-results.html';
+
+        closeJokeModal();
+        return;
+    })
+    .catch(function(error) {
+        console.error('Error fetching random joke: ', error);
+    })
 }
 
 function dadJoke(event) {
