@@ -14,7 +14,7 @@ function renderUselessFact(data) {
     );
     factEl.innerText = `${data}`;
     factDiv.appendChild(factEl);
-    displayEl.appendChild(factDiv);
+    displayEl.prepend(factDiv);
 }
 
 // render dad joke
@@ -30,7 +30,7 @@ function renderDadJoke(data) {
     );
     dadJokeEl.innerText = `${data}`;
     dadJokeDiv.appendChild(dadJokeEl);
-    displayEl.appendChild(dadJokeDiv);
+    displayEl.prepend(dadJokeDiv);
 }
 
 // render randomQuote fact
@@ -56,7 +56,7 @@ function renderRandomQuote(data) {
     authorEl.innerText = `~ ${data.author}`;
     quoteDiv.appendChild(quoteEl);
     quoteDiv.appendChild(authorEl);
-    displayEl.appendChild(quoteDiv);
+    displayEl.prepend(quoteDiv);
 }
 
 // render randomRiddle fact
@@ -83,7 +83,7 @@ function renderRiddle(data) {
     answerEl.innerText = `~ ${data[0].answer}`;
     riddleDiv.appendChild(riddleEl);
     riddleDiv.appendChild(answerEl);
-    displayEl.appendChild(riddleDiv);
+    displayEl.prepend(riddleDiv);
 }
 
 function renderRandomJoke(data) {
@@ -108,7 +108,7 @@ function renderRandomJoke(data) {
     punchlineEl.innerText = `${data.punchline}`;
     jokeDiv.appendChild(setupEl);
     jokeDiv.appendChild(punchlineEl);
-    displayEl.appendChild(jokeDiv);
+    displayEl.prepend(jokeDiv);
 }
 
 function checkFactType() {

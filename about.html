@@ -1,78 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="./assets/index.css">
-        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800&family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/index.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800&family=Jaro:opsz@6..72&display=swap"
+            rel="stylesheet"
+        />
         <title>Ice Breaker Station</title>
     </head>
-    <body class="bg-slate-800 min-h-screen flex flex-col" style="font-family: 'Jaro Sans', sans-serif;">
+    <body
+        class="bg-slate-800 min-h-screen flex flex-col"
+        style="font-family: 'Jaro Sans', sans-serif"
+    >
         <header class="w-screen bg-sky-200">
-            <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-                <a href="index.html" class="flex items-center flex-shrink-0 text-white mr-6">
+            <nav
+                class="flex items-center justify-between flex-wrap bg-teal-500 p-6"
+            >
+                <a
+                    href="index.html"
+                    class="flex items-center flex-shrink-0 text-white mr-6"
+                >
                     <div class="flex items-center">
-                        <img class="fill-current h-8 w-8 mr-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG-ix-vBALr8x7YFMY8YPufL9QuT6efOCIJw&s"/>
-                        <span class="font-semibold text-xl tracking-tight">Ice Breaker Station</span>
+                        <img
+                            class="fill-current h-8 w-8 mr-2"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG-ix-vBALr8x7YFMY8YPufL9QuT6efOCIJw&s"
+                        />
+                        <span class="font-semibold text-xl tracking-tight"
+                            >Ice Breaker Station</span
+                        >
                     </div>
                 </a>
                 <div id="menu-btn" class="block lg:hidden">
-                    <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-                        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <button
+                        class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+                    >
+                        <svg
+                            class="fill-current h-3 w-3"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
                             <title>Menu</title>
-                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                            <path
+                                d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
+                            />
                         </svg>
                     </button>
                 </div>
-                <div id="menu" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:justify-end hidden">
+                <div
+                    id="menu"
+                    class="w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:justify-end hidden"
+                >
                     <div class="text-sm lg:flex-grow lg:text-right">
-                        <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Home</a>
-                        <a href="about.html" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 font-bold">About</a>
-                        <a href="contact.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">Contact</a>
+                        <a
+                            href="index.html"
+                            class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                            >Home</a
+                        >
+                        <a
+                            href="about.html"
+                            class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 font-bold"
+                            >About</a
+                        >
+                        <a
+                            href="contact.html"
+                            class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+                            >Contact</a
+                        >
                     </div>
                 </div>
             </nav>
         </header>
 
-        <main class="container text-slate-300 mx-auto flex-grow flex flex-col items-center justify-center text-center">
+        <main
+            class="container text-slate-300 mx-auto flex-grow flex flex-col items-center justify-center text-center"
+        >
             <div id="video">
                 <div>
                     <h2 class="text-2xl font-bold mb-10 pt-10">About Us</h2>
                 </div>
                 <div class="flex justify-center">
-                    <video class="lg:w-3/4 md:w-3/4 sm:w-full h-auto sm:w-vw shadow-lg" controls src="./assets/images/Icebreakers.MP4" type="video/mp4">Your browser does not support the video tag.</video>
+                    <video
+                        class="lg:w-3/4 md:w-3/4 sm:w-full h-auto sm:w-vw shadow-lg glow-card"
+                        controls
+                        src="./assets/images/Icebreakers.MP4"
+                        type="video/mp4"
+                    >
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
-            <div id="aboutP" class="text-lg mb-4 pt-5 font-medium lg:w-3/4 md:w-3/4 sm:w-full sm:px-2">
-                <h2 class="text-2xl font-bold pt-5">Welcome to Icebreaker Station!</h2>
-                <p class="pt-3 pb-3">We are a group of aspiring web developers with a passion for creating engaging and interactive web experiences. Our team built the Icebreaker Station website to showcase what we've learned and to continue developing our skills in HTML, CSS, JavaScript, jQuery, APIs, and Tailwind CSS.</p>
+            <div
+                id="aboutP"
+                class="text-lg mb-4 pt-5 font-medium lg:w-3/4 md:w-3/4 sm:w-full sm:px-2"
+            >
+                <h2 class="text-2xl font-bold pt-5">
+                    Welcome to Icebreaker Station!
+                </h2>
+                <p class="pt-3 pb-3">
+                    We are a group of aspiring web developers with a passion for
+                    creating engaging and interactive web experiences. Our team
+                    built the Icebreaker Station website to showcase what we've
+                    learned and to continue developing our skills in HTML, CSS,
+                    JavaScript, jQuery, APIs, and Tailwind CSS.
+                </p>
                 <h3 class="text-xl font-bold pt-3">Our Mission</h3>
-                <p class="pt-3 pb-3">Our mission is to help people easily find fun and effective icebreakers. Whether you're looking to break the ice in a meeting, a classroom, or a social gathering, Icebreaker Station has a variety of tools to make it easier for you to connect with others.</p>
+                <p class="pt-3 pb-3">
+                    Our mission is to help people easily find fun and effective
+                    icebreakers. Whether you're looking to break the ice in a
+                    meeting, a classroom, or a social gathering, Icebreaker
+                    Station has a variety of tools to make it easier for you to
+                    connect with others.
+                </p>
                 <h3 class="text-xl font-bold pt-3">What We've Learned</h3>
-                <p class="pt-3 pb-3">Through the development of Icebreaker Station, we have enhanced our understanding and practical application of:</p>
+                <p class="pt-3 pb-3">
+                    Through the development of Icebreaker Station, we have
+                    enhanced our understanding and practical application of:
+                </p>
                 <ul class="pt-3 pb-3">
-                    <li>HTML: Structuring our web content in a meaningful and accessible way.</li>
-                    <li>JavaScript: Adding interactivity and dynamic content to our website.</li>
-                    <li>jQuery: Simplifying JavaScript tasks and making our code more concise.</li>
-                    <li>APIs: Integrating external data sources to provide dynamic and updated content.</li>
-                    <li>Tailwind CSS: Utilizing a utility-first CSS framework to streamline our styling process and maintain consistency across our site.</li>
+                    <li>
+                        HTML: Structuring our web content in a meaningful and
+                        accessible way.
+                    </li>
+                    <li>
+                        JavaScript: Adding interactivity and dynamic content to
+                        our website.
+                    </li>
+                    <li>
+                        jQuery: Simplifying JavaScript tasks and making our code
+                        more concise.
+                    </li>
+                    <li>
+                        APIs: Integrating external data sources to provide
+                        dynamic and updated content.
+                    </li>
+                    <li>
+                        Tailwind CSS: Utilizing a utility-first CSS framework to
+                        streamline our styling process and maintain consistency
+                        across our site.
+                    </li>
                 </ul>
                 <h3 class="text-xl font-bold pt-3">Our Journey</h3>
-                <p class="pt-3 pb-3">Building Icebreaker Station has been a rewarding journey. It has allowed us to apply our theoretical knowledge in real-world scenarios, solve practical problems, and create a functional and valuable tool for our users.</p>
+                <p class="pt-3 pb-3">
+                    Building Icebreaker Station has been a rewarding journey. It
+                    has allowed us to apply our theoretical knowledge in
+                    real-world scenarios, solve practical problems, and create a
+                    functional and valuable tool for our users.
+                </p>
                 <h3 class="text-xl font-bold pt-3">Our Team</h3>
-                <p class="pt-3 pb-3">We are a diverse team of developers who share a common goal of continuous learning and improvement. Our collaboration on this project has strengthened our teamwork and project management skills, preparing us for future endeavors in the web development field.</p>
+                <p class="pt-3 pb-3">
+                    We are a diverse team of developers who share a common goal
+                    of continuous learning and improvement. Our collaboration on
+                    this project has strengthened our teamwork and project
+                    management skills, preparing us for future endeavors in the
+                    web development field.
+                </p>
                 <h3 class="text-xl font-bold pt-3">Contact Us</h3>
-                <p class="pt-3">We love hearing from our users! If you have any questions, suggestions, or feedback, please check out our <a href="contact.html" class="text-teal-500 hover:text-teal-700">Contact Page</a>.</p>
-                <p class="pt-3 pb-3">Thank you for visiting Icebreaker Station. We hope you find our tools helpful and fun!</p>
+                <p class="pt-3">
+                    We love hearing from our users! If you have any questions,
+                    suggestions, or feedback, please check out our
+                    <a
+                        href="contact.html"
+                        class="text-teal-500 hover:text-teal-700"
+                        >Contact Page</a
+                    >.
+                </p>
+                <p class="pt-3 pb-3">
+                    Thank you for visiting Icebreaker Station. We hope you find
+                    our tools helpful and fun!
+                </p>
             </div>
         </main>
 
         <footer class="w-screen bg-sky-200 mt-8">
-            <nav class="flex items-center justify-start flex-wrap bg-teal-500 p-6">
-                <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+            <nav
+                class="flex items-center justify-start flex-wrap bg-teal-500 p-6"
+            >
+                <div
+                    class="w-full block flex-grow lg:flex lg:items-center lg:w-auto"
+                >
                     <div class="text-sm lg:flex-grow lg:text-left">
                         <p class="justify-center text-center block mt-4 text-teal-200 text-white mr-4 text-base">
                             How much does a polar bear weigh? Enough to break the ice.
