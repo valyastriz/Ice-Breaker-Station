@@ -36,13 +36,14 @@ function renderRandomQuote(data) {
 }
 
 function renderRandomJoke(data) {
+    console.log(data);
     const jokeDiv = document.createElement('div');
     const setupEl = document.createElement('h1');
     setupEl.classList.add('text-white', 'text-2xl', 'text-slate-50', 'tracking-wide', 'font-bold');
     const punchlineEl = document.createElement('h2');
     punchlineEl.classList.add('text-white', 'text-1xl', 'text-slate-50', 'tracking-wide', 'font-bold');
-    setupEl.innerText = 
-    punchlineEl.innerText = 
+    setupEl.innerText = `${data.setup}`;
+    punchlineEl.innerText = `${data.punchline}`;
     jokeDiv.appendChild(setupEl);
     jokeDiv.appendChild(punchlineEl);
     displayEl.appendChild(jokeDiv);
@@ -50,17 +51,18 @@ function renderRandomJoke(data) {
 
 function checkFactType() {
     const selectedType = localStorage.getItem('selectedType');
-    const data = JSON.parse(localStorage.getItem(selectedType));
+    const data = JSON.parse(localStorage.getItem('joke'));
+    console.log(selectedType)
     if (selectedType === 'uselessFact') {
         renderUselessFact(data.text);
     }
     else if (selectedType === "randomQuote") {
         renderRandomQuote(data);
     }
-    if (selectedType === 'randomJoke') {
+    else if (selectedType === 'randomJoke') {
         renderRandomJoke(data);
     } 
-    if (selectedType === "dadJoke") {
+    else if (selectedType === "dadJoke") {
         renderDadJoke(data);
     }
     else {

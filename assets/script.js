@@ -41,7 +41,6 @@ function jokeOfDay() {
 
 function randomJoke(event) {
     //To Do: Add logic for API call and store the response in local storage
-    event.preventDefault();
 
     localStorage.clear();
     fetch(`https://official-joke-api.appspot.com/random_joke`)
@@ -56,15 +55,19 @@ function randomJoke(event) {
             return;
         }
         console.log(data);
+
         let setup = data.setup;
         let punchline = data.punchline;
         const joke = {
             setup: setup, 
             punchline: punchline
         }
+
         localStorage.setItem('joke', JSON.stringify(joke));
         localStorage.setItem('selectedType', 'randomJoke');
-        window.location.href = 'search-results.html';
+
+        window.location.href ='search-results.html';
+
         closeJokeModal();
         return;
     })
