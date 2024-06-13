@@ -9,7 +9,7 @@
             href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Jaro:opsz@6..72&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="./assets/index.css" />
+        <link rel="stylesheet" href="./assets/search-results.css" />
         <script src="https://cdn.tailwindcss.com"></script>
         <title>Ice Breaker Station</title>
     </head>
@@ -18,15 +18,20 @@
             <nav
                 class="flex items-center justify-between flex-wrap bg-teal-500 p-6"
             >
-                <div class="flex items-center flex-shrink-0 text-white mr-6">
-                    <img
-                        class="fill-current h-8 w-8 mr-2"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG-ix-vBALr8x7YFMY8YPufL9QuT6efOCIJw&s"
-                    />
-                    <span class="font-semibold text-xl tracking-tight"
-                        >Ice Breaker Station</span
-                    >
-                </div>
+                <a
+                    href="index.html"
+                    class="flex items-center flex-shrink-0 text-white mr-6"
+                >
+                    <div class="flex items-center">
+                        <img
+                            class="fill-current h-8 w-8 mr-2"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG-ix-vBALr8x7YFMY8YPufL9QuT6efOCIJw&s"
+                        />
+                        <span class="font-semibold text-xl tracking-tight"
+                            >Ice Breaker Station</span
+                        >
+                    </div>
+                </a>
                 <div class="block lg:hidden">
                     <button
                         class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
@@ -70,13 +75,19 @@
         <main
             class="container mx-auto text-slate-300 mx-auto flex-grow flex px-6 gap-6 flex-col items-center justify-center text-center"
         >
-            <div id="displayResult" class="size-4/6 bg-teal-500">
+            <div
+                class="pb-10 col-span-1 bg-teal-500 min-h-90 p-10 rounded-lg glow-card"
+            >
+                <div
+                    id="displayResult"
+                    class="grid grid-cols-1 gap-10 w-full text-white bg-teal-500 flex items-center justify-center"
+                ></div>
                 <div id="backBtnDiv">
                     <button
                         id="backBtn"
-                        class="bg-sky-200 px-2 max-w-52 m-auto pt-1 pb-1 rounded font-bold hover:cursor-pointer hover:bg-sky-300 focus:outline-none hover:ring hover:ring-cyan-600"
+                        class="mt-6 bg-slate-800 px-2 max-w-52 m-auto pt-1 pb-1 rounded font-bold hover:cursor-pointer hover:bg-sky-300 focus:outline-none hover:ring hover:ring-cyan-600"
                     >
-                        Generate a new Icebreaker
+                        New Icebreaker
                     </button>
                 </div>
             </div>
@@ -123,5 +134,6 @@
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
         <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
         <script src="./assets/search-results.js"></script>
+        <script src="./assets/menu-btn.js"></script>
     </body>
 </html>
