@@ -70,6 +70,7 @@ function renderRiddle(data) {
         'tracking-wide',
         'font-bold'
     );
+
     const answerEl = document.createElement('h2');
     answerEl.classList.add(
         'text-white',
@@ -79,7 +80,7 @@ function renderRiddle(data) {
         'font-bold'
     );
     console.log(data);
-    console.log(data.question, data.answer);
+    console.log(data[0].question, data[0].answer);
     riddleEl.innerText = `${data[0].question}`;
     answerEl.innerText = `~ ${data[0].answer}`;
     riddleDiv.appendChild(riddleEl);
@@ -88,7 +89,7 @@ function renderRiddle(data) {
 }
 
 function renderRandomJoke(data) {
-    console.log(data);
+    console.log("new", data);
     const jokeDiv = document.createElement('div');
     const setupEl = document.createElement('h1');
     setupEl.classList.add(
@@ -106,6 +107,7 @@ function renderRandomJoke(data) {
         'tracking-wide',
         'font-bold'
     );
+    console.log("new",data);
     setupEl.innerText = `${data.setup}`;
     punchlineEl.innerText = `${data.punchline}`;
     jokeDiv.appendChild(setupEl);
@@ -115,17 +117,24 @@ function renderRandomJoke(data) {
 
 function checkFactType() {
     const selectedType = localStorage.getItem('selectedType');
-    const data = JSON.parse(localStorage.getItem('joke'));
-    console.log(selectedType);
+    let data;
+    console.log('in checkfactype', selectedType);
     if (selectedType === 'uselessFact') {
+        data = JSON.parse(localStorage.getItem('uselessFact'));
         renderUselessFact(data.text);
     } else if (selectedType === 'randomQuote') {
+        data = JSON.parse(localStorage.getItem('randomQuote'));
         renderRandomQuote(data);
     } else if (selectedType === 'randomJoke') {
+        console.log("again", selectedType)
+        data = JSON.parse(localStorage.getItem('randomJoke'));
+        console.log(data)
         renderRandomJoke(data);
     } else if (selectedType === 'dadJoke') {
+        data = JSON.parse(localStorage.getItem('dadJoke'));
         renderDadJoke(data);
     } else if (selectedType === 'riddle') {
+        data = JSON.parse(localStorage.getItem('riddle'));
         renderRiddle(data);
     } else {
         console.error('Unknown Type');

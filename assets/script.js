@@ -82,12 +82,12 @@ function randomJoke(event) {
 
         let setup = data.setup;
         let punchline = data.punchline;
-        const joke = {
+        const randomJoke = {
             setup: setup, 
             punchline: punchline
         }
 
-        localStorage.setItem('joke', JSON.stringify(joke));
+        localStorage.setItem('randomJoke', JSON.stringify(randomJoke));
         localStorage.setItem('selectedType', 'randomJoke');
 
         window.location.href ='search-results.html';
