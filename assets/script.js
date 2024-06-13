@@ -100,7 +100,7 @@ function dadJoke(event) {
 
     $.ajax({
         method: 'GET',
-        url: 'https://api.api-ninjas.com/v1/dadjokes?limit=1',
+        url: 'https://api.api-ninjas.com/v1/dadjokes',
         headers: { 'X-API-Key': 'bMihd37nmqvClWbzkx7xfQ==ibPk7EDF5byNpUhy' },
         contentType: 'application/json',
         success: function (data) {
