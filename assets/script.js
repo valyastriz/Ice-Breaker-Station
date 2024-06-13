@@ -54,7 +54,7 @@ function riddle(event) {
             localStorage.setItem('selectedType', 'riddle');
             localStorage.setItem('riddle', JSON.stringify(data));
             //redirect to a search-results page
-            //  window.location.href = 'search-results.html';
+            window.location.href = 'search-results.html';
             return;
         },
         error: function ajaxError(jqXHR) {
