@@ -79,8 +79,6 @@ function renderRiddle(data) {
         'tracking-wide',
         'font-bold'
     );
-    console.log(data);
-    console.log(data[0].question, data[0].answer);
     riddleEl.innerText = `${data[0].question}`;
     answerEl.innerText = `~ ${data[0].answer}`;
     riddleDiv.appendChild(riddleEl);
@@ -89,7 +87,6 @@ function renderRiddle(data) {
 }
 
 function renderRandomJoke(data) {
-    console.log("new", data);
     const jokeDiv = document.createElement('div');
     const setupEl = document.createElement('h1');
     setupEl.classList.add(
@@ -107,7 +104,6 @@ function renderRandomJoke(data) {
         'tracking-wide',
         'font-bold'
     );
-    console.log("new", data);
     setupEl.innerText = `${data.setup}`;
     punchlineEl.innerText = `${data.punchline}`;
     jokeDiv.appendChild(setupEl);
@@ -118,7 +114,6 @@ function renderRandomJoke(data) {
 function checkFactType() {
     const selectedType = localStorage.getItem('selectedType');
     let data;
-    console.log('in checkfactype', selectedType);
     if (selectedType === 'uselessFact') {
         data = JSON.parse(localStorage.getItem('uselessFact'));
         renderUselessFact(data.text);
@@ -126,9 +121,7 @@ function checkFactType() {
         data = JSON.parse(localStorage.getItem('randomQuote'));
         renderRandomQuote(data);
     } else if (selectedType === 'randomJoke') {
-        console.log("again", selectedType);
         data = JSON.parse(localStorage.getItem('randomJoke'));
-        console.log(data);
         renderRandomJoke(data);
     } else if (selectedType === 'dadJoke') {
         data = JSON.parse(localStorage.getItem('dadJoke'));

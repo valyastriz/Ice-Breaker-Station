@@ -27,8 +27,6 @@ function handleSubmit(event) {
 }
 
 function riddle(event) {
-    console.log('we are in riddle');
-
     // Clear local storage so only this result will display on results screen
     localStorage.clear();
 
@@ -66,7 +64,6 @@ function randomJoke(event) {
     fetch('https://official-joke-api.appspot.com/random_joke')
         .then(async (resp) => {
             let response = await resp.json();
-            console.log(response);
             return response;
         })
         .then(function (data) {
@@ -74,7 +71,6 @@ function randomJoke(event) {
                 console.log('No results returned');
                 return;
             }
-            console.log(data);
 
             let setup = data.setup;
             let punchline = data.punchline;
@@ -177,8 +173,6 @@ async function getRandomQuote(event) {
         return;
     }
     newQuote = data.content;
-    console.log(newQuote);
-    console.log('data', data);
     localStorage.setItem('selectedType', 'randomQuote');
     localStorage.setItem('randomQuote', JSON.stringify(data));
     // Redirect to a search-results page
