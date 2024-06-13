@@ -22,15 +22,12 @@ function handleSubmit(event) {
             randomJoke();
         } else if (selection === 'dadJoke') {
             dadJoke();
-        } else if (selection === 'dadJoke') {
-            dadJoke();
         }
     }
 }
 
 function riddle(event) {
-    /* event.preventDefault(); */
-    console.log('were in riddle');
+    console.log('we are in riddle');
 
     // Clear local storage so only this result will display on results screen
     localStorage.clear();
@@ -53,9 +50,8 @@ function riddle(event) {
             };
             localStorage.setItem('selectedType', 'riddle');
             localStorage.setItem('riddle', JSON.stringify(data));
-            //redirect to a search-results page
+            // Redirect to a search-results page
             window.location.href = 'search-results.html';
-            return;
         },
         error: function ajaxError(jqXHR) {
             console.error('Error: ', jqXHR.responseText);
@@ -64,49 +60,47 @@ function riddle(event) {
 }
 
 function randomJoke(event) {
-    //To Do: Add logic for API call and store the response in local storage
-
+    // Clear local storage so only this result will display on results screen
     localStorage.clear();
-    fetch(`https://official-joke-api.appspot.com/random_joke`)
-    .then(async (resp) => {
-        let response = await resp.json();
-        console.log(response);
-        return response;
-    })
-    .then(function(data) {
-        if (!data || !data.punchline) {
-            console.log('No results returned');
-            return;
-        }
-        console.log(data);
 
-        let setup = data.setup;
-        let punchline = data.punchline;
-        const randomJoke = {
-            setup: setup, 
-            punchline: punchline
-        }
+    fetch('https://official-joke-api.appspot.com/random_joke')
+        .then(async (resp) => {
+            let response = await resp.json();
+            console.log(response);
+            return response;
+        })
+        .then(function (data) {
+            if (!data || !data.punchline) {
+                console.log('No results returned');
+                return;
+            }
+            console.log(data);
 
-        localStorage.setItem('randomJoke', JSON.stringify(randomJoke));
-        localStorage.setItem('selectedType', 'randomJoke');
+            let setup = data.setup;
+            let punchline = data.punchline;
+            const randomJoke = {
+                setup: setup,
+                punchline: punchline
+            };
 
-        window.location.href ='search-results.html';
+            localStorage.setItem('randomJoke', JSON.stringify(randomJoke));
+            localStorage.setItem('selectedType', 'randomJoke');
 
-        closeJokeModal();
-        return;
-    })
-    .catch(function(error) {
-        console.error('Error fetching random joke: ', error);
-    })
+            window.location.href = 'search-results.html';
+            closeJokeModal();
+        })
+        .catch(function (error) {
+            console.error('Error fetching random joke: ', error);
+        });
 }
 
 function dadJoke(event) {
-    // event.preventDefault();
-    //clear local storage so only this result will display on results screen
+    // Clear local storage so only this result will display on results screen
     localStorage.clear();
+
     $.ajax({
         method: 'GET',
-        url: 'https://api.api-ninjas.com/v1/dadjokes?limit=',
+        url: 'https://api.api-ninjas.com/v1/dadjokes?limit=1',
         headers: { 'X-API-Key': 'bMihd37nmqvClWbzkx7xfQ==ibPk7EDF5byNpUhy' },
         contentType: 'application/json',
         success: function (data) {
@@ -117,21 +111,15 @@ function dadJoke(event) {
             const dadJoke = data[0].joke;
             localStorage.setItem('selectedType', 'dadJoke');
             localStorage.setItem('dadJoke', JSON.stringify(dadJoke));
-            //redirect to a search-results page
+            // Redirect to a search-results page
             window.location.href = 'search-results.html';
-            return;
         },
         error: function ajaxError(jqXHR) {
             console.error('Error: ', jqXHR.responseText);
         },
     });
 
-    //To Do: Add logic for API call and store the response in local storage
-    console.log('dadJoke');
-    localStorage.setItem('selectedType', 'dadJoke');
     closeJokeModal();
-    // window.location.href = 'search-results.html';
-    return;
 }
 
 function openJokeModal(event) {
@@ -140,7 +128,7 @@ function openJokeModal(event) {
 }
 
 function closeJokeModal() {
-    //clear the form fields
+    // Clear the form fields
     const form = document.querySelector('#dialog-form form');
     if (form) {
         form.reset();
@@ -148,14 +136,14 @@ function closeJokeModal() {
     jokeModalEl.classList.add('hidden');
 }
 
-//function to handle the click on the useless facts card
+// Function to handle the click on the useless facts card
 function uselessFactClick(event) {
     event.preventDefault();
 
-    //clear local storage so only this result will display on results screen
+    // Clear local storage so only this result will display on results screen
     localStorage.clear();
 
-    fetch(`https://uselessfacts.jsph.pl/api/v2/facts/random`)
+    fetch('https://uselessfacts.jsph.pl/api/v2/facts/random')
         .then(function (resp) {
             return resp.json();
         })
@@ -167,20 +155,17 @@ function uselessFactClick(event) {
             uselessFact = data.text;
             localStorage.setItem('selectedType', 'uselessFact');
             localStorage.setItem('uselessFact', JSON.stringify(data));
-            //redirect to a search-results page
+            // Redirect to a search-results page
             window.location.href = 'search-results.html';
-            return;
         })
         .catch(function (error) {
             console.error('Error fetching random useless fact: ', error);
         });
-
-    //save the fact to local storage
 }
 
 async function getRandomQuote(event) {
     event.preventDefault();
-    //clear local storage so only this result will display on results screen
+    // Clear local storage so only this result will display on results screen
     localStorage.clear();
 
     const targetUrl = 'https://api.quotable.io/random';
@@ -196,15 +181,15 @@ async function getRandomQuote(event) {
     console.log('data', data);
     localStorage.setItem('selectedType', 'randomQuote');
     localStorage.setItem('randomQuote', JSON.stringify(data));
-    //redirect to a search-results page
+    // Redirect to a search-results page
     window.location.href = 'search-results.html';
-    return;
 }
+
 dropdownEl.addEventListener('change', () => {
     const selection = dropdownEl.value;
     const errorMessageEl = document.getElementById('errorMessage');
     if (selection !== 'noSelection') {
-        errorMessageEl.textContent = ''; //clear the error message when a valid selection is made, even before submit is clicked
+        errorMessageEl.textContent = ''; // Clear the error message when a valid selection is made, even before submit is clicked
     }
 });
 
@@ -213,4 +198,3 @@ inspirQuoteEl.addEventListener('click', getRandomQuote);
 jokeBtnEl.addEventListener('click', openJokeModal);
 cancelBtnEl.addEventListener('click', closeJokeModal);
 submitEl.addEventListener('submit', handleSubmit);
-// new api for random quote https://api.quotable.io/random
