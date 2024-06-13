@@ -15,11 +15,13 @@
     <body class="bg-slate-800 min-h-screen flex flex-col" style="font-family: 'Jaro Sans', sans-serif">
         <header class="w-screen bg-sky-200">
             <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-                <div class="flex items-center flex-shrink-0 text-white mr-6">
-                    <img class="fill-current h-8 w-8 mr-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG-ix-vBALr8x7YFMY8YPufL9QuT6efOCIJw&s" />
-                    <span class="font-semibold text-xl tracking-tight">Ice Breaker Station</span>
-                </div>
-                <div class="block lg:hidden">
+                <a href="index.html" class="flex items-center flex-shrink-0 text-white mr-6">
+                    <div class="flex items-center">
+                        <img class="fill-current h-8 w-8 mr-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG-ix-vBALr8x7YFMY8YPufL9QuT6efOCIJw&s"/>
+                        <span class="font-semibold text-xl tracking-tight">Ice Breaker Station</span>
+                    </div>
+                </a>
+                <div id="menu-btn" class="block lg:hidden">
                     <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
                         <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <title>Menu</title>
@@ -27,9 +29,9 @@
                         </svg>
                     </button>
                 </div>
-                <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:justify-end">
+                <div id="menu" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:justify-end hidden">
                     <div class="text-sm lg:flex-grow lg:text-right">
-                        <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Home</a>
+                        <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 font-bold">Home</a>
                         <a href="about.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">About</a>
                         <a href="contact.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">Contact</a>
                     </div>
@@ -43,32 +45,31 @@
                 </div>
             </div>
             <div class="text-center text-white">
-                <h1 class="text-2xl my-3">Breaking ice is hard work... Let us do it for you!</h1>
-                <h2 class="text-1xl my-3">Select the type of icebreaker you would like to generate.</h2>
+                <h1 class="lg:text-3xl my-3 md:text-2xl text-2xl">Breaking ice is hard work... Let us do it for you!</h1>
+                <h2 class="text-lg text:sm my-3">Please select the type of icebreaker you would like to generate.</h2>
             </div>
             <div class="mx-auto columns-1 sm:columns-3 place-items-center md:flex justify-center">
-                <button class="relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer flex justify-center" id="inspirQuote">
+                <button class="glow-card relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer flex justify-center" id="inspirQuote">
                     <img src="./assets/images/icecube.png" alt="image of a 3D ice cube" />
                     <div id="quote-box" class="absolute inset-0 flex items-center justify-center text-center font-bold text-slate-700">
                         Random Quote
                     </div>
                 </button>
-                <button id="jokeBtn" class="relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer flex justify-center">
+                <button id="jokeBtn" class="glow-card relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer flex justify-center">
                     <img src="./assets/images/icecube.png" alt="image of a 3D ice cube" />
                     <div id="joke-box" class="absolute inset-0 flex items-center justify-center text-center font-bold text-slate-700">
-                        Jokes & More
+                        Jokes & Riddles
                     </div>
                 </button>
-                <!--new from here-->
                 <div id="jokeModal" class="modal hidden">
                     <div class="text-xl font-medium text-black text-center">Joke</div>
                     <br />
-                    <p class="text-slate-500 text-center">What type of joke are you looking for?</p>
+                    <p class="text-black text-center">What type of joke are you looking for?</p>
                     <div id="dialog-form" title="Choose a genre:">
                         <br />
                         <form class="w-full" id="jokeForm">
                             <label for="dropdown"></label>
-                            <select class="w-full p-2 border border-gray-300 rounded" id="dropdown" name="dropdown">
+                            <select class="w-full p-2 border border-gray-300 rounded custom-select" id="dropdown" name="dropdown">
                                 <option id="noSelection" value="noSelection">Select an option</option>
                                 <option id="riddle" value="riddle">Riddle</option>
                                 <option id="randomJoke" value="randomJoke">Random Joke</option>
@@ -84,9 +85,7 @@
                         </form>
                     </div>
                 </div>
-                <!--new to here-->
-                <!-- original from here -->
-                <button id="uselessFact" class="relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer flex justify-center">
+                <button id="uselessFact" class="glow-card relative max-w-52 m-auto pt-3 pb-3 hover:cursor-pointer flex justify-center">
                     <img src="./assets/images/icecube.png" alt="image of a 3D ice cube" />
                     <div id="fact-box" class="absolute inset-0 flex items-center justify-center text-center font-bold text-slate-700">
                         Useless Fact
@@ -110,5 +109,6 @@
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
         <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
         <script src="./assets/script.js"></script>
+        <script src="./assets/menu-btn.js"></script>
     </body>
 </html>
