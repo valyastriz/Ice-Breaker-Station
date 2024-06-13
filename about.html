@@ -17,7 +17,7 @@
                     <img class="fill-current h-8 w-8 mr-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG-ix-vBALr8x7YFMY8YPufL9QuT6efOCIJw&s"/>
                     <span class="font-semibold text-xl tracking-tight">Ice Breaker Station</span>
                 </div>
-                <div class="block lg:hidden">
+                <div id="menu-btn" class="block lg:hidden">
                     <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
                         <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <title>Menu</title>
@@ -25,10 +25,10 @@
                         </svg>
                     </button>
                 </div>
-                <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:justify-end">
+                <div id="menu" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:justify-end hidden">
                     <div class="text-sm lg:flex-grow lg:text-right">
                         <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Home</a>
-                        <a href="about.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">About</a>
+                        <a href="about.html" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 font-bold">About</a>
                         <a href="contact.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">Contact</a>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                     <video class="lg:w-3/4 md:w-3/4 sm:w-full h-auto sm:w-vw shadow-lg" controls src="./assets/images/Icebreakers.MP4" type="video/mp4">Your browser does not support the video tag.</video>
                 </div>
             </div>
-            <div id="aboutP" class="text-lg mb-4 pt-5 font-medium lg:w-3/4 md:w-3/4 sm:w-full">
+            <div id="aboutP" class="text-lg mb-4 pt-5 font-medium lg:w-3/4 md:w-3/4 sm:w-full sm:px-2">
                 <h2 class="text-2xl font-bold pt-5">Welcome to Icebreaker Station!</h2>
                 <p class="pt-3 pb-3">We are a group of aspiring web developers with a passion for creating engaging and interactive web experiences. Our team built the Icebreaker Station website to showcase what we've learned and to continue developing our skills in HTML, CSS, JavaScript, jQuery, APIs, and Tailwind CSS.</p>
                 <h3 class="text-xl font-bold pt-3">Our Mission</h3>
@@ -84,5 +84,6 @@
 
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
         <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+        <script src="./assets/menu-btn.js"></script>
     </body>
 </html>
