@@ -16,8 +16,8 @@ function handleSubmit(event) {
     if (selection === 'noSelection') {
         errorMessageEl.textContent = '*Please make a selection.';
     } else {
-        if (selection === 'jokeOfDay') {
-            jokeOfDay();
+        if (selection === 'riddle') {
+            riddle();
         } else if (selection === 'randomJoke') {
             randomJoke();
         } else if (selection === 'dadJoke') {
@@ -28,16 +28,16 @@ function handleSubmit(event) {
     }
 }
 
-function jokeOfDay(event) {
+function riddle(event) {
     /* event.preventDefault(); */
+    console.log('were in riddle');
 
     // Clear local storage so only this result will display on results screen
     localStorage.clear();
 
-    const limit = 1;
     $.ajax({
         method: 'GET',
-        url: 'https://api.api-ninjas.com/v1/jokes?limit=' + limit,
+        url: 'https://api.api-ninjas.com/v1/riddles',
         headers: { 'X-Api-Key': 'nNkzxsYKaz1ZMXgovIC5Hw==JugYXRd15s1J5cw5' },
         contentType: 'application/json',
         success: function (data) {
@@ -45,11 +45,16 @@ function jokeOfDay(event) {
                 console.log('No results returned');
                 return;
             }
-            const jokeOfDay = data[0].joke;
-            localStorage.setItem('selectedType', 'jokeOfDay');
-            localStorage.setItem('jokeOfDay', JSON.stringify(jokeOfDay));
+            const question = data[0].question;
+            const answer = data[0].answer;
+            const riddle = {
+                question: question,
+                answer: answer,
+            };
+            localStorage.setItem('selectedType', 'riddle');
+            localStorage.setItem('riddle', JSON.stringify(data));
             //redirect to a search-results page
-            window.location.href = 'search-results.html';
+            //  window.location.href = 'search-results.html';
             return;
         },
         error: function ajaxError(jqXHR) {
