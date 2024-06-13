@@ -1,7 +1,7 @@
 const displayEl = document.getElementById('displayResult');
 const backBtnEl = document.getElementById('backBtn');
 
-//render useless fact
+// render useless fact
 function renderUselessFact(data) {
     const factDiv = document.createElement('div');
     const factEl = document.createElement('h1');
@@ -17,7 +17,7 @@ function renderUselessFact(data) {
     displayEl.appendChild(factDiv);
 }
 
-//render dad joke
+// render dad joke
 function renderDadJoke(data) {
     const dadJokeDiv = document.createElement('div');
     const dadJokeEl = document.createElement('h1');
@@ -33,7 +33,7 @@ function renderDadJoke(data) {
     displayEl.appendChild(dadJokeDiv);
 }
 
-//render randomQuote fact
+// render randomQuote fact
 function renderRandomQuote(data) {
     const quoteDiv = document.createElement('div');
     const quoteEl = document.createElement('h1');
@@ -59,7 +59,7 @@ function renderRandomQuote(data) {
     displayEl.appendChild(quoteDiv);
 }
 
-//render randomRiddle fact
+// render randomRiddle fact
 function renderRiddle(data) {
     const riddleDiv = document.createElement('div');
     const riddleEl = document.createElement('h1');
@@ -107,7 +107,7 @@ function renderRandomJoke(data) {
         'tracking-wide',
         'font-bold'
     );
-    console.log("new",data);
+    console.log("new", data);
     setupEl.innerText = `${data.setup}`;
     punchlineEl.innerText = `${data.punchline}`;
     jokeDiv.appendChild(setupEl);
@@ -126,9 +126,9 @@ function checkFactType() {
         data = JSON.parse(localStorage.getItem('randomQuote'));
         renderRandomQuote(data);
     } else if (selectedType === 'randomJoke') {
-        console.log("again", selectedType)
+        console.log("again", selectedType);
         data = JSON.parse(localStorage.getItem('randomJoke'));
-        console.log(data)
+        console.log(data);
         renderRandomJoke(data);
     } else if (selectedType === 'dadJoke') {
         data = JSON.parse(localStorage.getItem('dadJoke'));
@@ -143,13 +143,12 @@ function checkFactType() {
 
 function handleBackBtnClick(event) {
     event.preventDefault();
-    //redirect to a index.html page
+    // redirect to a index.html page
     window.location.href = 'index.html';
     return;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     checkFactType();
-
     backBtnEl.addEventListener('click', handleBackBtnClick);
 });
