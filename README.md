@@ -18,79 +18,49 @@ Icebreaker Station solves the problem of finding and generating engaging icebrea
 
 ### Learnings:
 
-Through this project, we learned how to integrate multiple server-side APIs, implement client-side storage, ensure responsive design, and create a polished user interface using a CSS framework other than Bootstrap.
-
-## Table of Contents
-
--   Installation
--   Usage
--   Credits
--   License
+Through this project, we learned how to integrate multiple server-side APIs, implement client-side storage, ensure responsive design, and create a polished user interface using a Tailwind. We also learned how to work as a group on a coding project and how to resolve merge conflicts.
 
 ## Usage
 
-Icebreaker Station allows users to generate different types of icebreakers and share them easily.
+Icebreaker Station allows users to generate different types of icebreakers quickly and easily.
 
 ## How to Use
 
--   Landing Page: The landing page features a clean and modern design with a header, navigation menu, and a call-to-action section. It includes a welcome message and a brief description of the website’s purpose.
+-   Landing Page: The landing page features a clean and modern design with a header, responsive navigation menu, and icecube cards the user can select to render an icebreaker of their choice. It includes a welcome message and a brief description of the website’s purpose.
 
--   Search Page: Navigate to the search page via the landing page or navigation menu. Select the type of icebreaker (Joke, Quote, Mad Lib, Two Sides of a Coin, Ice Breaker Questions) and click the “Generate Ice Breaker” button.
+-   Results Page: The results page displays the generated icebreaker in a visually appealing text card. A “New Icebreaker” button is available for taking the user back to the home page where they can generate another icebreaker.
 
--   Results Page: The results page displays the generated icebreaker in a visually appealing text box or card. Users can share it via social media or copy it to their clipboard. A “Back to Search” button is available for generating another icebreaker.
+-   About Page: The About page showcases an engaging video accompanied by a custom song that narrates the story of our journey in creating the Icebreaker Website. It also highlights how the Icebreaker website can assist users in various scenarios.
+
+-   Contact Page: The Contact Page features four interactive cards, each containing links to our GitHub, LinkedIn, and Portfolio pages, making it easy for users to connect with us.
+
+  
     Screenshots
+    
+
 
 ## Credits
 
 This project was created by a group of four team members as part of the OSU Bootcamp.
 
--   Valya Strizheus
--   Ashley Wright
--   Bezawit Reshid
--   Gabrielle Seri
+- [Valya Strizheus](https://github.com/valyastriz)
+- [Ashley Wright](https://github.com/ajwmp93)
+- [Bezawit Reshid](https://github.com/bezaosu)
+- [Gabrielle Seri](https://github.com/DevGS23)
 
 We used the following third-party assets:
 
--   CSS Framework
--   API for Jokes
--   API for Quotes
--   API for Mad Libs
--   API for Two Sides of a Coin
--   API for Ice Breaker Questions
+- [Tailwind Framework](https://tailwindcss.com/)
+- [API for Random Jokes](https://official-joke-api.appspot.com/random_joke)
+- [API for Dad Jokes](https://api-ninjas.com/api/dadjokes)
+- [API for Quotes](https://docs.quotable.io/)
+- [API for Riddles](https://api-ninjas.com/api/riddles)
+- [API for Useless Facts](https://uselessfacts.jsph.pl/random)
 
 ## Features
 
--   Generate different types of icebreakers
--   Share icebreakers via social media or copy to clipboard
--   Responsive design supporting both light and dark modes
--   Client-side storage for quick access to previously generated icebreakers
+-   Generate different types of icebreakers including Random Quotes, Useless Facts, Dad Jokes, Random Jokes and Riddles.
+-   Responsive design supporting different screen sizes
+-   Client-side storage for saving generated icebreakers and displaying to the results screen.
 
-## How to Contribute
 
-If you would like to contribute to this project, please follow these guidelines:
-
--   Fork the repository.
-
--   Create a new branch for your feature or bugfix:
-    bash
-
--   Copy code:
-    git checkout -b feature/your-feature-name
-
--   Commit your changes:
-    bash
-
--   Copy code:
-    git commit -m 'Add your feature'
-
--   Push to the branch:
-    bash
-
--   Copy code:
-    git push origin feature/your-feature-name
-
--   Open a pull request
-
-## Tests
-
-Currently, there are no automated tests for this project. However, you can manually test the application by using it in various browsers and devices to ensure all functionalities work as expected.
