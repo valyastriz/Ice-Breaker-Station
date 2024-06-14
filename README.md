@@ -34,9 +34,21 @@ Icebreaker Station allows users to generate different types of icebreakers quick
 
 -   Contact Page: The Contact Page features four interactive cards, each containing links to our GitHub, LinkedIn, and Portfolio pages, making it easy for users to connect with us.
 
-  
-    Screenshots
-    
+## Screenshots
+### Home Page
+![Home Page](./assets/images/home-pg-screenshot.paint)
+
+### Modal
+![Modal](./assets/images/modal-screenshot.png)
+
+### Results Page
+![Results Page](./assets/images/results-screenshot.png)
+
+### Contact Page
+![Contact Page](./assets/images/contact-screenshot.png)
+
+### About Page
+![About Page](./assets/images/about-screenshot.png)
 
 
 ## Credits
