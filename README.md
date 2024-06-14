@@ -36,7 +36,7 @@ Icebreaker Station allows users to generate different types of icebreakers quick
 
 ## Screenshots
 ### Home Page
-![Home Page](./assets/images/home-pg-screenshot.paint)
+![Home Page](./assets/images/home-pg-screenshot.png)
 
 ### Modal
 ![Modal](./assets/images/modal-screenshot.png)
