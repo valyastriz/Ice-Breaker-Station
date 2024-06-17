@@ -22,7 +22,7 @@ Through this project, we learned how to integrate multiple server-side APIs, imp
 
 ## Usage
 
-Icebreaker Station allows users to generate different types of icebreakers quickly and easily.
+Icebreaker Station allows users to generate different types of icebreakers quickly and easily. You can visit the depoloyed site here
 
 ## How to Use
 
@@ -33,6 +33,32 @@ Icebreaker Station allows users to generate different types of icebreakers quick
 -   About Page: The About page showcases an engaging video accompanied by a custom song that narrates the story of our journey in creating the Icebreaker Website. It also highlights how the Icebreaker website can assist users in various scenarios.
 
 -   Contact Page: The Contact Page features four interactive cards, each containing links to our GitHub, LinkedIn, and Portfolio pages, making it easy for users to connect with us.
+
+## Cloning the Repository
+
+To clone the repository and use it locally, follow these steps:
+
+1. Open your terminal or command prompt.
+2. Run the following command to clone the repository:
+
+    ```sh
+    git clone https://github.com/valyastriz/Icebreaker-Station.git
+    ```
+
+3. Navigate to the cloned repository:
+
+    ```sh
+    cd Icebreaker-Station
+    ```
+
+4. Open the `index.html` file in your preferred web browser to view the website locally.
+
+## Visiting the Deployed Site
+
+You can also visit the deployed site directly by clicking on the following URL:
+
+[https://valyastriz.github.io/Icebreaker-Station/](https://valyastriz.github.io/Icebreaker-Station/)
+
 
 ## Screenshots
 ### Home Page
